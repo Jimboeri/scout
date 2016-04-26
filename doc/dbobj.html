@@ -1,0 +1,873 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module dbobj</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>dbobj</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/data1/dev/scout/py/dbobj.py">/data1/dev/scout/py/dbobj.py</a></font></td></tr></table>
+    <p><tt>Provides&nbsp;all&nbsp;class&nbsp;definitions&nbsp;needed&nbsp;to&nbsp;access&nbsp;data&nbsp;structures</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ConfigParser.html">ConfigParser</a><br>
+<a href="Cookie.html">Cookie</a><br>
+<a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="pg.html">pg</a><br>
+<a href="pgdb.html">pgdb</a><br>
+</td><td width="25%" valign=top><a href="procs.html">procs</a><br>
+<a href="random.html">random</a><br>
+<a href="sha.html">sha</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+<a href="time.html">time</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="dbobj.html#achieverec">achieverec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#achievesubrec">achievesubrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#achievesubunitrec">achievesubunitrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#award_sublevel">award_sublevel</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#awardrec">awardrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#awardtyperec">awardtyperec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#connectrec">connectrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#dbinstance">dbinstance</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#dbinstanceold">dbinstanceold</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#dt_time">dt_time</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#histrec">histrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#messagerec">messagerec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#ou_disprec">ou_disprec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#ou_structrec">ou_structrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#ourec">ourec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#paramrec">paramrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#person_list">person_list</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#personrec">personrec</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="dbobj.html#adultrec">adultrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#scoutrec">scoutrec</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="dbobj.html#rolerec">rolerec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#section_list">section_list</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#sectionrec">sectionrec</a>
+</font></dt><dt><font face="helvetica, arial"><a href="dbobj.html#sys_admin_msg_list">sys_admin_msg_list</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="achieverec">class <strong>achieverec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;individual&nbsp;achievements<br>
+Each&nbsp;achievement&nbsp;is&nbsp;linked&nbsp;to&nbsp;an&nbsp;<a href="#awardrec">awardrec</a>&nbsp;instance&nbsp;and&nbsp;a&nbsp;<a href="#personrec">personrec</a>&nbsp;instance.<br>
+The&nbsp;award_id&nbsp;and&nbsp;person&nbsp;(scout_id)&nbsp;for&nbsp;the&nbsp;primary&nbsp;key&nbsp;for&nbsp;this&nbsp;instance<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="achieverec-__init__"><strong>__init__</strong></a>(self, db, in_scout_id, in_awd_id)</dt><dd><tt>This&nbsp;initialises&nbsp;the&nbsp;instance&nbsp;and&nbsp;sets&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+From&nbsp;the&nbsp;Database<br>
+&nbsp;&nbsp;scout_id&nbsp;(in_scout_id&nbsp;from&nbsp;parameter&nbsp;list)<br>
+&nbsp;&nbsp;award_id&nbsp;(in_awd_id&nbsp;from&nbsp;parameter&nbsp;list)<br>
+&nbsp;&nbsp;dt_obtained&nbsp;('')<br>
+&nbsp;&nbsp;name&nbsp;('')<br>
+&nbsp;&nbsp;comments&nbsp;('')<br>
+&nbsp;&nbsp;status&nbsp;('')&nbsp;-&nbsp;'H'&nbsp;if&nbsp;the&nbsp;award&nbsp;is&nbsp;achieved,&nbsp;'W'&nbsp;if&nbsp;the&nbsp;acheivement&nbsp;is&nbsp;'W'ork&nbsp;in&nbsp;progress<br>
+&nbsp;&nbsp;done&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;achievement&nbsp;is&nbsp;held&nbsp;-&nbsp;related&nbsp;to&nbsp;status&nbsp;field&nbsp;above<br>
+&nbsp;&nbsp;awd_presented&nbsp;(0)<br>
+&nbsp;&nbsp;ldr_notify&nbsp;(0)<br>
+&nbsp;<br>
+Other<br>
+&nbsp;&nbsp;database&nbsp;(database&nbsp;from&nbsp;the&nbsp;parameter&nbsp;list)<br>
+&nbsp;&nbsp;sublevel&nbsp;(Empty&nbsp;list)&nbsp;List&nbsp;of&nbsp;<a href="#achievesubrec">achievesubrec</a>&nbsp;instances&nbsp;populated&nbsp;by&nbsp;<a href="#achieverec-sublevels">sublevels</a>()&nbsp;method<br>
+&nbsp;&nbsp;found&nbsp;-&nbsp;Set&nbsp;to&nbsp;one&nbsp;if&nbsp;record&nbsp;found<br>
+&nbsp;&nbsp;result&nbsp;-&nbsp;Set&nbsp;by&nbsp;add/update&nbsp;operations<br>
+&nbsp;&nbsp;current&nbsp;-Initially&nbsp;0,&nbsp;set&nbsp;by&nbsp;some&nbsp;operations&nbsp;to&nbsp;show&nbsp;if&nbsp;currntly&nbsp;appropriate&nbsp;achievement</tt></dd></dl>
+
+<dl><dt><a name="achieverec-add"><strong>add</strong></a>(self)</dt><dd><tt>Adds&nbsp;an&nbsp;achievement&nbsp;record<br>
+First&nbsp;validates&nbsp;that&nbsp;the&nbsp;scout_id&nbsp;and&nbsp;award_id&nbsp;are&nbsp;valid<br>
+Then&nbsp;checks&nbsp;if&nbsp;the&nbsp;record&nbsp;already&nbsp;exists,&nbsp;does&nbsp;nothing&nbsp;if&nbsp;it&nbsp;does<br>
+Then&nbsp;inserts&nbsp;the&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="achieverec-check_complete"><strong>check_complete</strong></a>(self)</dt><dd><tt>Check&nbsp;all&nbsp;sub&nbsp;levels&nbsp;to&nbsp;see&nbsp;if&nbsp;the&nbsp;award&nbsp;has&nbsp;been&nbsp;achieved<br>
+Obtains&nbsp;award&nbsp;record,&nbsp;no&nbsp;action&nbsp;if&nbsp;not&nbsp;found,&nbsp;should&nbsp;never&nbsp;be&nbsp;the&nbsp;case<br>
+Populates&nbsp;the&nbsp;sublevels&nbsp;list&nbsp;data&nbsp;attribute<br>
+Iterate&nbsp;through&nbsp;the&nbsp;award&nbsp;sublevel&nbsp;list&nbsp;to&nbsp;see&nbsp;if&nbsp;all&nbsp;mandatory&nbsp;steps&nbsp;have&nbsp;been&nbsp;acheived<br>
+Then&nbsp;checks&nbsp;option&nbsp;steps<br>
+If&nbsp;all&nbsp;completed,&nbsp;returns&nbsp;1,&nbsp;otherwise&nbsp;returns&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="achieverec-delete"><strong>delete</strong></a>(self)</dt><dd><tt>This&nbsp;method&nbsp;currently&nbsp;does&nbsp;nothing</tt></dd></dl>
+
+<dl><dt><a name="achieverec-find_sa"><strong>find_sa</strong></a>(self, in_sub_award_id)</dt><dd><tt>find&nbsp;the&nbsp;sub&nbsp;achievement&nbsp;record&nbsp;in&nbsp;the&nbsp;existing&nbsp;sublevel&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="achieverec-sublevels"><strong>sublevels</strong></a>(self)</dt><dd><tt>Populates&nbsp;data&nbsp;attibute&nbsp;sublevel&nbsp;with&nbsp;<a href="#achievesubrec">achievesubrec</a>&nbsp;instances</tt></dd></dl>
+
+<dl><dt><a name="achieverec-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;an&nbsp;achievement&nbsp;record</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="achievesubrec">class <strong>achievesubrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;individual&nbsp;achievement&nbsp;sub&nbsp;records.&nbsp;These&nbsp;are&nbsp;the&nbsp;steps<br>
+needed&nbsp;to&nbsp;complete&nbsp;the&nbsp;achjievement.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="achievesubrec-__init__"><strong>__init__</strong></a>(self, db, in_scout_id, in_awd_id, in_sub_awd_id)</dt><dd><tt>Initialises&nbsp;the&nbsp;<a href="#achievesubrec">achievesubrec</a>&nbsp;instance&nbsp;and&nbsp;sets&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+From&nbsp;database<br>
+&nbsp;<br>
+&nbsp;&nbsp;scout_id&nbsp;(in_scout_id&nbsp;from&nbsp;params)<br>
+&nbsp;&nbsp;award_id&nbsp;(in_awd_id&nbsp;from&nbsp;params)<br>
+&nbsp;&nbsp;sub_award_id&nbsp;(in_sub_awd_id&nbsp;from&nbsp;params)<br>
+&nbsp;&nbsp;dt_obtained&nbsp;('')<br>
+&nbsp;&nbsp;name&nbsp;('')<br>
+&nbsp;&nbsp;descr&nbsp;('')<br>
+&nbsp;&nbsp;comments&nbsp;('')<br>
+Other<br>
+&nbsp;&nbsp;found&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;record&nbsp;found<br>
+&nbsp;&nbsp;units&nbsp;-&nbsp;List&nbsp;of&nbsp;<a href="#achievesubunitrec">achievesubunitrec</a>&nbsp;instances<br>
+&nbsp;&nbsp;complete&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;achieve&nbsp;step&nbsp;is&nbsp;completed<br>
+&nbsp;&nbsp;num_req&nbsp;-&nbsp;From&nbsp;awardsub&nbsp;table&nbsp;-&nbsp;number&nbsp;of&nbsp;steps&nbsp;to&nbsp;be&nbsp;completed</tt></dd></dl>
+
+<dl><dt><a name="achievesubrec-add"><strong>add</strong></a>(self)</dt><dd><tt>Adds&nbsp;a&nbsp;sub&nbsp;award&nbsp;record.<br>
+Validates&nbsp;that&nbsp;scout&nbsp;and&nbsp;sub&nbsp;award&nbsp;exist&nbsp;first</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="achievesubunitrec">class <strong>achievesubunitrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;individual&nbsp;achievement&nbsp;sub&nbsp;records&nbsp;where&nbsp;they&nbsp;are&nbsp;split&nbsp;into&nbsp;multiple&nbsp;options<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="achievesubunitrec-__init__"><strong>__init__</strong></a>(self, db, in_scout_id, in_awd_id, in_sub_awd_id, in_sub_ach_id)</dt><dd><tt>Initiates&nbsp;the&nbsp;<a href="#achievesubunitrec">achievesubunitrec</a>&nbsp;and&nbsp;sets&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+Database<br>
+&nbsp;&nbsp;scout_id&nbsp;(in_scout_id&nbsp;from&nbsp;parameters)<br>
+&nbsp;&nbsp;award_id&nbsp;(in_awd_id&nbsp;from&nbsp;parameters)<br>
+&nbsp;&nbsp;sub_award_id&nbsp;(in_sub_awd_id&nbsp;from&nbsp;parameters)<br>
+&nbsp;&nbsp;sub_ach_id&nbsp;(in_sub_ach_id&nbsp;from&nbsp;parameters)<br>
+&nbsp;&nbsp;dt_obtained&nbsp;('')<br>
+&nbsp;&nbsp;comments&nbsp;('')<br>
+Other<br>
+&nbsp;&nbsp;database&nbsp;-&nbsp;From&nbsp;params<br>
+&nbsp;&nbsp;found&nbsp;(0)&nbsp;Set&nbsp;to&nbsp;1&nbsp;is&nbsp;found</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="adultrec">class <strong>adultrec</strong></a>(<a href="dbobj.html#personrec">personrec</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;an&nbsp;adult&nbsp;record<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="adultrec-__init__"><strong>__init__</strong></a>(self, db, nScout_id)</dt><dd><tt>Instatiates&nbsp;the&nbsp;instance&nbsp;and&nbsp;populates&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes&nbsp;IN&nbsp;ADDITION<br>
+&nbsp;&nbsp;to&nbsp;those&nbsp;populated&nbsp;by&nbsp;<a href="#personrec">personrec</a>.<br>
+Data&nbsp;Attributes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;passwd&nbsp;-&nbsp;Password&nbsp;(hashed)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;oldpasswd&nbsp;-&nbsp;Previous&nbsp;password&nbsp;(hashed)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pw_hint&nbsp;-&nbsp;Password&nbsp;hint<br>
+&nbsp;&nbsp;&nbsp;&nbsp;online_agree_dt&nbsp;Date&nbsp;of&nbsp;online&nbsp;agreement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;partner_id&nbsp;(0)&nbsp;-&nbsp;ID&nbsp;of&nbsp;partner&nbsp;if&nbsp;defined<br>
+&nbsp;&nbsp;&nbsp;&nbsp;partner_forename&nbsp;-&nbsp;Forename&nbsp;of&nbsp;partner&nbsp;(if&nbsp;defined)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;partner_initials&nbsp;=&nbsp;Partner&nbsp;initials<br>
+&nbsp;&nbsp;&nbsp;&nbsp;partner_surname&nbsp;-&nbsp;Partner&nbsp;surname<br>
+&nbsp;&nbsp;&nbsp;&nbsp;home_level&nbsp;-&nbsp;No&nbsp;longer&nbsp;used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;home_id&nbsp;-&nbsp;No&nbsp;longer&nbsp;used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;home_ou_id&nbsp;-&nbsp;ID&nbsp;of&nbsp;home&nbsp;OU<br>
+&nbsp;&nbsp;&nbsp;&nbsp;superuser&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;a&nbsp;superuser<br>
+&nbsp;&nbsp;&nbsp;&nbsp;email_bounce&nbsp;-&nbsp;Not&nbsp;yet&nbsp;used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;kidlist&nbsp;=&nbsp;[]&nbsp;-&nbsp;List&nbsp;of&nbsp;children&nbsp;of&nbsp;this&nbsp;adult,&nbsp;populated&nbsp;by&nbsp;<a href="#adultrec-kids_list">kids_list</a>()</tt></dd></dl>
+
+<dl><dt><a name="adultrec-add"><strong>add</strong></a>(self)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;adult&nbsp;scout&nbsp;/&nbsp;parent&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="adultrec-check_pw"><strong>check_pw</strong></a>(self, passwd)</dt><dd><tt>Checks&nbsp;if&nbsp;password&nbsp;matches&nbsp;hash&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="adultrec-find_email"><strong>find_email</strong></a>(self, cEmail)</dt><dd><tt>Returns&nbsp;of&nbsp;scout&nbsp;id&nbsp;if&nbsp;email&nbsp;address&nbsp;is&nbsp;found,&nbsp;otherwise&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="adultrec-find_on_line_id"><strong>find_on_line_id</strong></a>(self, cOn_line_id)</dt><dd><tt>Returns&nbsp;of&nbsp;scout&nbsp;id&nbsp;if&nbsp;on-line_id&nbsp;found,&nbsp;otherwise&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="adultrec-kids_list"><strong>kids_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#scoutrec">scoutrec</a>&nbsp;instances&nbsp;that&nbsp;list&nbsp;this&nbsp;<a href="#adultrec">adultrec</a>&nbsp;as&nbsp;a&nbsp;parent</tt></dd></dl>
+
+<dl><dt><a name="adultrec-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;adult&nbsp;scout&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="adultrec-update_pw"><strong>update_pw</strong></a>(self, passwd, oldpasswd, superuser)</dt><dd><tt>Updates&nbsp;password&nbsp;related&nbsp;fields</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="dbobj.html#personrec">personrec</a>:<br>
+<dl><dt><a name="adultrec-achieve_list"><strong>achieve_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;achievements</tt></dd></dl>
+
+<dl><dt><a name="adultrec-achieve_wip_list"><strong>achieve_wip_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;achievements&nbsp;in&nbsp;WIP&nbsp;status</tt></dd></dl>
+
+<dl><dt><a name="adultrec-all_award_info"><strong>all_award_info</strong></a>(self)</dt><dd><tt>Collates&nbsp;all&nbsp;award&nbsp;and&nbsp;achievement&nbsp;info</tt></dd></dl>
+
+<dl><dt><a name="adultrec-award_tbd"><strong>award_tbd</strong></a>(self, ou, curs, ach_list, ach_wiplist, awd_todolist)</dt><dd><tt>Checks&nbsp;for&nbsp;awards&nbsp;available&nbsp;to&nbsp;the&nbsp;ou&nbsp;that&nbsp;have&nbsp;not&nbsp;been&nbsp;achieved&nbsp;or&nbsp;worked&nbsp;on</tt></dd></dl>
+
+<dl><dt><a name="adultrec-check_junior"><strong>check_junior</strong></a>(self, ourec, param)</dt><dd><tt>This&nbsp;procedure&nbsp;determines&nbsp;if&nbsp;a&nbsp;persn&nbsp;should&nbsp;be&nbsp;treated&nbsp;as&nbsp;a&nbsp;junior,&nbsp;i.e.&nbsp;needs&nbsp;guardians<br>
+It&nbsp;requires&nbsp;the&nbsp;ou&nbsp;instance&nbsp;to&nbsp;see&nbsp;if&nbsp;this&nbsp;is&nbsp;only&nbsp;for&nbsp;juniors<br>
+and&nbsp;also&nbsp;the&nbsp;param&nbsp;object&nbsp;to&nbsp;check&nbsp;which&nbsp;age&nbsp;someone&nbsp;should&nbsp;be&nbsp;a&nbsp;junior</tt></dd></dl>
+
+<dl><dt><a name="adultrec-role_by_ou"><strong>role_by_ou</strong></a>(self, ou_id)</dt><dd><tt>Returns&nbsp;a&nbsp;role&nbsp;record&nbsp;for&nbsp;an&nbsp;ou&nbsp;and&nbsp;a&nbsp;person&nbsp;if&nbsp;it&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="adultrec-role_list"><strong>role_list</strong></a>(self, status<font color="#909090">=''</font>)</dt><dd><tt>Populates&nbsp;the&nbsp;rolelist&nbsp;data&nbsp;attribute&nbsp;with&nbsp;<a href="#rolerec">rolerec</a>&nbsp;objects</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="award_sublevel">class <strong>award_sublevel</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;award&nbsp;sub&nbsp;level&nbsp;definition&nbsp;record<br>
+Data&nbsp;attributes<br>
+&nbsp;&nbsp;Fromdatabase<br>
+&nbsp;&nbsp;&nbsp;&nbsp;award_id&nbsp;(Input&nbsp;-&nbsp;in_awd_id)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sub_award_id&nbsp;(Input&nbsp;-&nbsp;in_sub_award_id)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;('')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;descr&nbsp;('')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;optional&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;num_req&nbsp;(1)<br>
+&nbsp;&nbsp;Other<br>
+&nbsp;&nbsp;&nbsp;&nbsp;database&nbsp;(Input&nbsp;database)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;(0)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="award_sublevel-__init__"><strong>__init__</strong></a>(self, db, in_awd_id<font color="#909090">=0</font>, in_sub_award_id<font color="#909090">=0</font>)</dt><dd><tt>Initialiases&nbsp;the&nbsp;<a href="#award_sublevel">award_sublevel</a>&nbsp;instance&nbsp;if&nbsp;the&nbsp;record&nbsp;is&nbsp;found&nbsp;in&nbsp;the&nbsp;table</tt></dd></dl>
+
+<dl><dt><a name="award_sublevel-add"><strong>add</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;create&nbsp;a&nbsp;new&nbsp;sub&nbsp;level&nbsp;of&nbsp;award&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="award_sublevel-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;a&nbsp;sub&nbsp;award&nbsp;record</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="awardrec">class <strong>awardrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;award&nbsp;definition&nbsp;record<br>
+The&nbsp;following&nbsp;data&nbsp;attributes&nbsp;are&nbsp;available:<br>
+&nbsp;&nbsp;From&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;award_id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;award_type&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_struct&nbsp;(0)&nbsp;_&nbsp;From&nbsp;award_type&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;('')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;descr&nbsp;('')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;opt_needed&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prereq&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;leader&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status&nbsp;('')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;current&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;yrs_valid&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mth_valid&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;expires&nbsp;(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;collective&nbsp;(0)<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;database&nbsp;(Database&nbsp;fom&nbsp;initialisation)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sublevel&nbsp;[]&nbsp;-&nbsp;Populated&nbsp;with&nbsp;<a href="#award_sublevel">award_sublevel</a>&nbsp;instances&nbsp;when&nbsp;this&nbsp;is&nbsp;instantiated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;record&nbsp;found<br>
+&nbsp;<br>
+Methods<br>
+&nbsp;&nbsp;<a href="#awardrec-update">update</a>()<br>
+&nbsp;&nbsp;<a href="#awardrec-add">add</a>()<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="awardrec-__init__"><strong>__init__</strong></a>(self, db, in_awd_id<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="awardrec-add"><strong>add</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;create&nbsp;a&nbsp;new&nbsp;award&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="awardrec-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;an&nbsp;award&nbsp;record</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="awardtyperec">class <strong>awardtyperec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;award&nbsp;types&nbsp;database&nbsp;objects<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="awardtyperec-__init__"><strong>__init__</strong></a>(self, db, in_award_type)</dt><dd><tt>Instantiates&nbsp;the&nbsp;object&nbsp;from&nbsp;the&nbsp;database&nbsp;information.<br>
+Parameter:<br>
+&nbsp;&nbsp;in_award_type&nbsp;-&nbsp;mandatory<br>
+Data&nbsp;attributes&nbsp;set<br>
+&nbsp;&nbsp;&nbsp;&nbsp;database&nbsp;-&nbsp;Database&nbsp;object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;aws&nbsp;per&nbsp;in_award_type&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sect_cd<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_struct<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;-&nbsp;1&nbsp;if&nbsp;found,&nbsp;otherwise&nbsp;0</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="connectrec">class <strong>connectrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Abstracts&nbsp;connection<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="connectrec-__init__"><strong>__init__</strong></a>(self, db)</dt></dl>
+
+<dl><dt><a name="connectrec-char_disp"><strong>char_disp</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="connectrec-logout"><strong>logout</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;connection&nbsp;with&nbsp;the&nbsp;Logout&nbsp;sign</tt></dd></dl>
+
+<dl><dt><a name="connectrec-ou_security"><strong>ou_security</strong></a>(self, ou_id)</dt><dd><tt>Checks&nbsp;on&nbsp;security&nbsp;access&nbsp;rights&nbsp;for&nbsp;a&nbsp;user&nbsp;for&nbsp;this&nbsp;OU</tt></dd></dl>
+
+<dl><dt><a name="connectrec-pers_security"><strong>pers_security</strong></a>(self, scout)</dt><dd><tt>This&nbsp;procedure&nbsp;checks&nbsp;to&nbsp;see&nbsp;if&nbsp;read&nbsp;and&nbsp;/&nbsp;or&nbsp;write&nbsp;access&nbsp;is&nbsp;enabled&nbsp;for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;scout&nbsp;by&nbsp;this&nbsp;connection.&nbsp;It&nbsp;does&nbsp;this&nbsp;by&nbsp;checking&nbsp;all&nbsp;ou&nbsp;security&nbsp;for&nbsp;each&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role&nbsp;record&nbsp;held&nbsp;for&nbsp;the&nbsp;scout</tt></dd></dl>
+
+<dl><dt><a name="connectrec-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;connection&nbsp;with&nbsp;the&nbsp;last&nbsp;accessed&nbsp;time</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="dbinstance">class <strong>dbinstance</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;abstracts&nbsp;a&nbsp;PostgresQL&nbsp;database&nbsp;and&nbsp;permits&nbsp;DB&nbsp;access<br>
+Parameter&nbsp;-&nbsp;db_name&nbsp;-&nbsp;database&nbsp;name<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="dbinstance-__init__"><strong>__init__</strong></a>(self, db_name)</dt><dd><tt>Instantiates&nbsp;the&nbsp;object&nbsp;by&nbsp;connecting&nbsp;to&nbsp;the&nbsp;database</tt></dd></dl>
+
+<dl><dt><a name="dbinstance-close"><strong>close</strong></a>(self)</dt><dd><tt>Closes&nbsp;the&nbsp;database&nbsp;connection</tt></dd></dl>
+
+<dl><dt><a name="dbinstance-commit"><strong>commit</strong></a>(self)</dt><dd><tt>This&nbsp;procedure&nbsp;issues&nbsp;a&nbsp;DB&nbsp;commit</tt></dd></dl>
+
+<dl><dt><a name="dbinstance-query"><strong>query</strong></a>(self, cQry)</dt><dd><tt>This&nbsp;procedure&nbsp;executes&nbsp;an&nbsp;SQL&nbsp;query,&nbsp;and&nbsp;populates&nbsp;a&nbsp;dictionary<br>
+(dictresult)&nbsp;with&nbsp;the&nbsp;results</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="dbinstanceold">class <strong>dbinstanceold</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>OBSOLETE<br>
+A&nbsp;Class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;database&nbsp;connection<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="dbinstanceold-__init__"><strong>__init__</strong></a>(self, db_name)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="dt_time">class <strong>dt_time</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;to&nbsp;abstract&nbsp;date&nbsp;and&nbsp;time&nbsp;and&nbsp;perform&nbsp;calculations<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="dt_time-__init__"><strong>__init__</strong></a>(self, inp_gmtime)</dt></dl>
+
+<dl><dt><a name="dt_time-add"><strong>add</strong></a>(self, inp_seconds)</dt></dl>
+
+<dl><dt><a name="dt_time-sql_time"><strong>sql_time</strong></a>(self, inp_string)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="histrec">class <strong>histrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;used&nbsp;for&nbsp;storing&nbsp;and&nbsp;retrieving&nbsp;history&nbsp;(log&nbsp;/&nbsp;audit)&nbsp;records<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="histrec-__init__"><strong>__init__</strong></a>(self, db, hist_id<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="histrec-add"><strong>add</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="messagerec">class <strong>messagerec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;message&nbsp;record<br>
+This&nbsp;object&nbsp;is&nbsp;used&nbsp;to&nbsp;pass&nbsp;messages&nbsp;between&nbsp;users&nbsp;and&nbsp;to&nbsp;the&nbsp;sys&nbsp;admin<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="messagerec-__init__"><strong>__init__</strong></a>(self, db, in_msg_id<font color="#909090">=0</font>)</dt><dd><tt>This&nbsp;instantiates&nbsp;the&nbsp;object&nbsp;and&nbsp;set&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+From&nbsp;database<br>
+&nbsp;&nbsp;msg_id&nbsp;(in_msg_id&nbsp;from&nbsp;params)&nbsp;-&nbsp;ID&nbsp;of&nbsp;message<br>
+&nbsp;&nbsp;create_tm&nbsp;('')&nbsp;-&nbsp;Timestamp<br>
+&nbsp;&nbsp;from_id&nbsp;(0)&nbsp;-&nbsp;ID&nbsp;of&nbsp;user&nbsp;who&nbsp;created&nbsp;the&nbsp;message<br>
+&nbsp;&nbsp;to_id&nbsp;(0)&nbsp;-&nbsp;Recipient's&nbsp;ID<br>
+&nbsp;&nbsp;for_sysadmin&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;this&nbsp;is&nbsp;for&nbsp;a&nbsp;sysadmin<br>
+&nbsp;&nbsp;for_developer&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;this&nbsp;is&nbsp;for&nbsp;a&nbsp;developer<br>
+&nbsp;&nbsp;status&nbsp;('')&nbsp;-&nbsp;Status.&nbsp;Options&nbsp;are&nbsp;???<br>
+&nbsp;&nbsp;notify&nbsp;(0)&nbsp;-&nbsp;Notification&nbsp;flag<br>
+&nbsp;&nbsp;name&nbsp;('')<br>
+&nbsp;&nbsp;email&nbsp;('')<br>
+&nbsp;&nbsp;telephone&nbsp;('')<br>
+&nbsp;&nbsp;subject&nbsp;('')<br>
+&nbsp;&nbsp;body&nbsp;('')&nbsp;-&nbsp;Body&nbsp;of&nbsp;message<br>
+&nbsp;&nbsp;last_update&nbsp;-&nbsp;Timestamp<br>
+&nbsp;&nbsp;msg_response&nbsp;('')&nbsp;-&nbsp;Text&nbsp;for&nbsp;response<br>
+Other<br>
+&nbsp;&nbsp;database&nbsp;-&nbsp;database&nbsp;object<br>
+&nbsp;&nbsp;found&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="messagerec-add"><strong>add</strong></a>(self)</dt><dd><tt>Adds&nbsp;a&nbsp;new&nbsp;message&nbsp;record&nbsp;to&nbsp;the&nbsp;table&nbsp;based&nbsp;on&nbsp;data&nbsp;attributes&nbsp;set.</tt></dd></dl>
+
+<dl><dt><a name="messagerec-ntfy_update"><strong>ntfy_update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;a&nbsp;notification&nbsp;details</tt></dd></dl>
+
+<dl><dt><a name="messagerec-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;a&nbsp;message&nbsp;record</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ou_disprec">class <strong>ou_disprec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;ou_disp&nbsp;database&nbsp;record.<br>
+This&nbsp;record&nbsp;stores&nbsp;display&nbsp;information&nbsp;about&nbsp;an&nbsp;<a href="#ourec">ourec</a>&nbsp;that&nbsp;is&nbsp;relevant&nbsp;to&nbsp;a&nbsp;person<br>
+that&nbsp;is&nbsp;logged&nbsp;in&nbsp;as&nbsp;indicated&nbsp;by&nbsp;the&nbsp;<a href="#connectrec">connectrec</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ou_disprec-__init__"><strong>__init__</strong></a>(self, db, nOu_id, nConn_id)</dt><dd><tt>Instantiates&nbsp;the&nbsp;<a href="#ou_disprec">ou_disprec</a>&nbsp;with&nbsp;the&nbsp;data&nbsp;attributes&nbsp;as&nbsp;follows:<br>
+database&nbsp;&nbsp;database&nbsp;object<br>
+ou_id&nbsp;-&nbsp;ID&nbsp;of&nbsp;relevant&nbsp;OU<br>
+conn_id&nbsp;ID&nbsp;of&nbsp;<a href="#connectrec">connectrec</a><br>
+show_actions<br>
+expand_ou<br>
+all_members<br>
+found<br>
+exp_ou&nbsp;-&nbsp;Empty&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="ou_disprec-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Deletes&nbsp;accociated&nbsp;<a href="#ou_disprec">ou_disprec</a></tt></dd></dl>
+
+<dl><dt><a name="ou_disprec-update"><strong>update</strong></a>(self)</dt><dd><tt>Updates&nbsp;the&nbsp;database&nbsp;record&nbsp;for&nbsp;this&nbsp;<a href="#ourec">ourec</a>&nbsp;and&nbsp;<a href="#connectrec">connectrec</a></tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ou_structrec">class <strong>ou_structrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;organisational&nbsp;unit&nbsp;structure&nbsp;record<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ou_structrec-__init__"><strong>__init__</strong></a>(self, db, nOu_struct)</dt><dd><tt>Instantiates&nbsp;the&nbsp;<a href="#ou_structrec">ou_structrec</a>&nbsp;and&nbsp;sets&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+From&nbsp;the&nbsp;database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_struct&nbsp;-&nbsp;id&nbsp;of&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s_name&nbsp;-&nbsp;Name&nbsp;of&nbsp;structure,&nbsp;e.g.&nbsp;"Zone"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s_def_name&nbsp;-&nbsp;A&nbsp;default&nbsp;name&nbsp;for&nbsp;ou's&nbsp;relating&nbsp;to&nbsp;this&nbsp;structure<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hierarchic&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;this&nbsp;structure&nbsp;is&nbsp;dependant&nbsp;on&nbsp;a&nbsp;heirarchy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;forms&nbsp;part&nbsp;of&nbsp;that&nbsp;heirarchy<br>
+&nbsp;&nbsp;&nbsp;&nbsp;next_sect&nbsp;-&nbsp;In&nbsp;age&nbsp;based&nbsp;progression,&nbsp;defines&nbsp;the&nbsp;next&nbsp;age&nbsp;group&nbsp;structure&nbsp;up<br>
+&nbsp;&nbsp;&nbsp;&nbsp;start_age&nbsp;-&nbsp;Starting&nbsp;age&nbsp;for&nbsp;members&nbsp;of&nbsp;the&nbsp;OU's&nbsp;created&nbsp;off&nbsp;this&nbsp;structure<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end_age&nbsp;-&nbsp;Ending&nbsp;age&nbsp;for&nbsp;members&nbsp;of&nbsp;the&nbsp;OU's&nbsp;created&nbsp;off&nbsp;this&nbsp;structure<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sec_inherit&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;this&nbsp;OU&nbsp;inherits&nbsp;security&nbsp;from&nbsp;owner&nbsp;OU<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s_mngt_str&nbsp;-&nbsp;Hold&nbsp;the&nbsp;ou_struct&nbsp;id&nbsp;of&nbsp;the&nbsp;ou_struct&nbsp;record&nbsp;to&nbsp;be&nbsp;used&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mngt&nbsp;OU's&nbsp;for&nbsp;this&nbsp;struct<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mngt&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;OU's&nbsp;with&nbsp;this&nbsp;struct&nbsp;are&nbsp;managemet&nbsp;OU's<br>
+&nbsp;<br>
+General<br>
+&nbsp;&nbsp;&nbsp;&nbsp;database&nbsp;-&nbsp;database&nbsp;object&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;children&nbsp;-&nbsp;empty&nbsp;list&nbsp;of&nbsp;children&nbsp;<a href="#ou_structrec">ou_structrec</a>&nbsp;objects.&nbsp;Instantiated&nbsp;by&nbsp;<a href="#ou_structrec-sub_ou_list">sub_ou_list</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generic_list&nbsp;-&nbsp;empty&nbsp;list&nbsp;of&nbsp;available&nbsp;generic&nbsp;<a href="#ou_structrec">ou_structrec</a>&nbsp;objects.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Instantiated&nbsp;by&nbsp;<a href="#ou_structrec-sub_ou_list">sub_ou_list</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;awardlist&nbsp;=&nbsp;[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;awardtypes&nbsp;=&nbsp;[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;-&nbsp;def&nbsp;0,&nbsp;1&nbsp;if&nbsp;record&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="ou_structrec-award_list"><strong>award_list</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#awardrec">awardrec</a>&nbsp;objects&nbsp;relevant&nbsp;to&nbsp;this&nbsp;struct&nbsp;type.<br>
+Instantiates&nbsp;the&nbsp;awardlist&nbsp;data&nbsp;attribute&nbsp;and&nbsp;sorts&nbsp;it&nbsp;by&nbsp;name</tt></dd></dl>
+
+<dl><dt><a name="ou_structrec-award_types_list"><strong>award_types_list</strong></a>(self)</dt><dd><tt>Instantiates&nbsp;the&nbsp;awardtypes&nbsp;list&nbsp;with&nbsp;<a href="#awardtyperec">awardtyperec</a>&nbsp;objects&nbsp;and&nbsp;returns&nbsp;it</tt></dd></dl>
+
+<dl><dt><a name="ou_structrec-sub_ou_list"><strong>sub_ou_list</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#ou_structrec">ou_structrec</a>&nbsp;objects&nbsp;that&nbsp;are&nbsp;children&nbsp;of&nbsp;this&nbsp;ou_struct&nbsp;instance.<br>
+Also&nbsp;instantiates&nbsp;the&nbsp;genericlist&nbsp;with&nbsp;<a href="#ou_structrec">ou_structrec</a>&nbsp;objects.<br>
+&nbsp;&nbsp;These&nbsp;are&nbsp;generic&nbsp;<a href="#ou_structrec">ou_structrec</a>&nbsp;objects&nbsp;that&nbsp;can&nbsp;be&nbsp;children</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ourec">class <strong>ourec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;organisational&nbsp;unit&nbsp;record<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ourec-__init__"><strong>__init__</strong></a>(self, db, nOu_id)</dt><dd><tt>The&nbsp;procedure&nbsp;instantiates&nbsp;the&nbsp;<a href="#ourec">ourec</a>&nbsp;object:<br>
+Parameters:<br>
+&nbsp;&nbsp;db&nbsp;-&nbsp;a&nbsp;database&nbsp;object<br>
+&nbsp;&nbsp;nOu_id&nbsp;-&nbsp;the&nbsp;ou_id&nbsp;of&nbsp;the&nbsp;ou&nbsp;record&nbsp;that&nbsp;is&nbsp;sought<br>
+Data&nbsp;attributes:<br>
+&nbsp;&nbsp;These&nbsp;come&nbsp;from&nbsp;the&nbsp;database&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_id&nbsp;-&nbsp;the&nbsp;id&nbsp;of&nbsp;the&nbsp;org&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;-&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;ou<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_owner&nbsp;-&nbsp;the&nbsp;ID&nbsp;of&nbsp;the&nbsp;'parent'&nbsp;ou&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_struct&nbsp;-&nbsp;a&nbsp;reference&nbsp;to&nbsp;the&nbsp;ou&nbsp;structure&nbsp;table,&nbsp;defining&nbsp;the&nbsp;struct&nbsp;of&nbsp;the&nbsp;ou<br>
+&nbsp;&nbsp;&nbsp;&nbsp;curr_memb&nbsp;-&nbsp;number&nbsp;of&nbsp;current&nbsp;members<br>
+&nbsp;&nbsp;&nbsp;&nbsp;curr_child&nbsp;-&nbsp;number&nbsp;of&nbsp;current&nbsp;children<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p_addr1&nbsp;-&nbsp;Postal&nbsp;address<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p_addr2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p_addr3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p_code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;m_addr1&nbsp;-&nbsp;mailing&nbsp;address<br>
+&nbsp;&nbsp;&nbsp;&nbsp;m_addr2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;m_addr3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;m_code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;phone<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fax<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sect_cd&nbsp;-&nbsp;section&nbsp;code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;meet_time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;start_age<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end_age<br>
+&nbsp;&nbsp;&nbsp;&nbsp;award_remind<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mngt<br>
+&nbsp;<br>
+&nbsp;&nbsp;These&nbsp;come&nbsp;from&nbsp;the&nbsp;structure&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;struct_name&nbsp;-&nbsp;Name&nbsp;of&nbsp;the&nbsp;structure<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str_def_name&nbsp;-&nbsp;Default&nbsp;structure&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;struct_parent&nbsp;-&nbsp;Parent&nbsp;record&nbsp;of&nbsp;structure&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sec_inherit&nbsp;-&nbsp;flag&nbsp;to&nbsp;say&nbsp;is&nbsp;secuity&nbsp;is&nbsp;inherited<br>
+&nbsp;<br>
+&nbsp;&nbsp;These&nbsp;are&nbsp;general<br>
+&nbsp;&nbsp;&nbsp;&nbsp;database&nbsp;-&nbsp;the&nbsp;database&nbsp;object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;-&nbsp;set&nbsp;to&nbsp;1&nbsp;is&nbsp;seach&nbsp;for&nbsp;id&nbsp;is&nbsp;successful<br>
+&nbsp;&nbsp;&nbsp;&nbsp;junior&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;ou&nbsp;members&nbsp;are&nbsp;less&nbsp;than&nbsp;14<br>
+&nbsp;&nbsp;&nbsp;&nbsp;adult&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;all&nbsp;members&nbsp;are&nbsp;adults<br>
+&nbsp;&nbsp;&nbsp;&nbsp;childlist&nbsp;-&nbsp;Empty&nbsp;list,&nbsp;populated&nbsp;with&nbsp;<a href="#ourec">ourec</a>&nbsp;child&nbsp;records&nbsp;bu&nbsp;<a href="#ourec-child_list">child_list</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;heir_child_names&nbsp;-&nbsp;Empty&nbsp;list,&nbsp;populated&nbsp;in&nbsp;chld_list()&nbsp;method.&nbsp;Contains&nbsp;allowable&nbsp;child&nbsp;types<br>
+&nbsp;&nbsp;&nbsp;&nbsp;memberlist&nbsp;-&nbsp;Empty&nbsp;list,&nbsp;populated&nbsp;with&nbsp;members&nbsp;of&nbsp;the&nbsp;ou&nbsp;by&nbsp;<a href="#ourec-member_list">member_list</a>()&nbsp;method.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contains&nbsp;<a href="#rolerec">rolerec</a>&nbsp;objects<br>
+&nbsp;&nbsp;&nbsp;&nbsp;parentlist&nbsp;-&nbsp;Empty&nbsp;list,&nbsp;populated&nbsp;with&nbsp;parents&nbsp;of&nbsp;members&nbsp;by&nbsp;the&nbsp;<a href="#ourec-parent_list">parent_list</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mngt_ou&nbsp;-&nbsp;<a href="#ourec">ourec</a>&nbsp;of&nbsp;the&nbsp;management&nbsp;OU&nbsp;belonging&nbsp;to&nbsp;this&nbsp;OU&nbsp;set&nbsp;by&nbsp;<a href="#ourec-get_mngt">get_mngt</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ouowners&nbsp;-&nbsp;list&nbsp;(initially&nbsp;empty)&nbsp;of&nbsp;all&nbsp;owners&nbsp;up&nbsp;to&nbsp;root&nbsp;OU.&nbsp;Initialised&nbsp;by&nbsp;<a href="#ourec-ou_owners">ou_owners</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;awards&nbsp;-&nbsp;list&nbsp;initiall&nbsp;empty&nbsp;of&nbsp;possible&nbsp;awards&nbsp;that&nbsp;can&nbsp;be&nbsp;obtained&nbsp;in&nbsp;this&nbsp;OU.&nbsp;Populated&nbsp;by&nbsp;<a href="#ourec-award_list">award_list</a>()</tt></dd></dl>
+
+<dl><dt><a name="ourec-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Prints&nbsp;ou&nbsp;the&nbsp;ou&nbsp;attributes</tt></dd></dl>
+
+<dl><dt><a name="ourec-add"><strong>add</strong></a>(self)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;OU&nbsp;record&nbsp;in&nbsp;the&nbsp;OU&nbsp;table&nbsp;in&nbsp;the&nbsp;database</tt></dd></dl>
+
+<dl><dt><a name="ourec-add_mngt"><strong>add_mngt</strong></a>(self)</dt><dd><tt>Creates&nbsp;a&nbsp;management&nbsp;OU&nbsp;for&nbsp;this&nbsp;OU</tt></dd></dl>
+
+<dl><dt><a name="ourec-award_list"><strong>award_list</strong></a>(self)</dt><dd><tt>Populated&nbsp;the&nbsp;awards&nbsp;lists&nbsp;with&nbsp;award&nbsp;instances&nbsp;that&nbsp;can&nbsp;be&nbsp;obtained&nbsp;in&nbsp;this&nbsp;OU</tt></dd></dl>
+
+<dl><dt><a name="ourec-child_list"><strong>child_list</strong></a>(self)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;child&nbsp;OU's.&nbsp;This&nbsp;also&nbsp;updates&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+childlist&nbsp;-&nbsp;contains&nbsp;<a href="#ourec">ourec</a>&nbsp;objects<br>
+heir_child_names&nbsp;-&nbsp;contains&nbsp;tuples&nbsp;with&nbsp;name&nbsp;and&nbsp;ou_struct&nbsp;id's</tt></dd></dl>
+
+<dl><dt><a name="ourec-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Deletes&nbsp;an&nbsp;OU&nbsp;from&nbsp;the&nbsp;database</tt></dd></dl>
+
+<dl><dt><a name="ourec-get_mngt"><strong>get_mngt</strong></a>(self)</dt><dd><tt>Gets&nbsp;the&nbsp;<a href="#ourec">ourec</a>&nbsp;of&nbsp;the&nbsp;management&nbsp;OU&nbsp;for&nbsp;this&nbsp;OU&nbsp;and&nbsp;returns&nbsp;it</tt></dd></dl>
+
+<dl><dt><a name="ourec-member_list"><strong>member_list</strong></a>(self, status<font color="#909090">=''</font>)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;member&nbsp;role&nbsp;records&nbsp;and&nbsp;also&nbsp;updates&nbsp;the&nbsp;data&nbsp;attribute&nbsp;memberlist<br>
+memberlist&nbsp;contains&nbsp;<a href="#rolerec">rolerec</a>&nbsp;records</tt></dd></dl>
+
+<dl><dt><a name="ourec-ou_owners"><strong>ou_owners</strong></a>(self)</dt><dd><tt>Populates&nbsp;the&nbsp;ouowners&nbsp;list&nbsp;woth&nbsp;<a href="#ourec">ourec</a>&nbsp;instances&nbsp;of&nbsp;ou&nbsp;owners&nbsp;going&nbsp;up&nbsp;the&nbsp;heirarcic&nbsp;tree.<br>
+Starts&nbsp;with&nbsp;immediate&nbsp;owner,&nbsp;ends&nbsp;with&nbsp;root&nbsp;OU</tt></dd></dl>
+
+<dl><dt><a name="ourec-parent_list"><strong>parent_list</strong></a>(self, surname<font color="#909090">=''</font>)</dt><dd><tt>Populates&nbsp;the&nbsp;parentlist&nbsp;list&nbsp;with&nbsp;<a href="#adultrec">adultrec</a>&nbsp;objects&nbsp;and&nbsp;returns&nbsp;the&nbsp;list.<br>
+If&nbsp;the&nbsp;optional&nbsp;parameter&nbsp;surname&nbsp;is&nbsp;provided,&nbsp;the&nbsp;list&nbsp;will&nbsp;only&nbsp;be&nbsp;populated&nbsp;with<br>
+adult&nbsp;records&nbsp;if&nbsp;the&nbsp;child&nbsp;surname&nbsp;is&nbsp;equal&nbsp;OR&nbsp;if&nbsp;the&nbsp;adult&nbsp;surname&nbsp;is&nbsp;equal</tt></dd></dl>
+
+<dl><dt><a name="ourec-update"><strong>update</strong></a>(self)</dt><dd><tt>Updates&nbsp;OU&nbsp;record&nbsp;based&nbsp;on&nbsp;data&nbsp;attributes</tt></dd></dl>
+
+<dl><dt><a name="ourec-update_num"><strong>update_num</strong></a>(self)</dt><dd><tt>Updates&nbsp;the&nbsp;number&nbsp;of&nbsp;current&nbsp;children&nbsp;OU's&nbsp;and&nbsp;members</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="paramrec">class <strong>paramrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;parameters&nbsp;to&nbsp;the&nbsp;system<br>
+The&nbsp;parameters&nbsp;are&nbsp;read&nbsp;from&nbsp;the&nbsp;'scout.conf'&nbsp;file&nbsp;if&nbsp;not&nbsp;otherwise&nbsp;stated<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="paramrec-__init__"><strong>__init__</strong></a>(self, cfg_file<font color="#909090">=''</font>)</dt><dd><tt>Reads&nbsp;the&nbsp;file&nbsp;and&nbsp;instantiates&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes:<br>
+dbname<br>
+title<br>
+css_file<br>
+logo<br>
+age_variance<br>
+baseurl<br>
+pythondir<br>
+extract_dir<br>
+template_dir<br>
+email_extract_msg<br>
+email_account_create<br>
+email_pw_hint<br>
+email_header<br>
+email_footer<br>
+online_agreement<br>
+smtpserver<br>
+fromaddr<br>
+ot_cellpad<br>
+ot_cellspc<br>
+ot_brdr<br>
+it_cellpad<br>
+it_cellspc<br>
+it_brdr<br>
+testing&nbsp;-&nbsp;def&nbsp;0<br>
+junior_age&nbsp;(15)&nbsp;-&nbsp;Defines&nbsp;age&nbsp;below&nbsp;which&nbsp;must&nbsp;have&nbsp;parent&nbsp;details<br>
+group_ou_struct&nbsp;(4)&nbsp;-&nbsp;Defines&nbsp;OU&nbsp;struct&nbsp;of&nbsp;group&nbsp;level</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="person_list">class <strong>person_list</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##############################################################################<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="person_list-__init__"><strong>__init__</strong></a>(self, db, search_str, type)</dt><dd><tt>This&nbsp;class&nbsp;returns&nbsp;a&nbsp;dictionary&nbsp;of&nbsp;personal&nbsp;details&nbsp;with&nbsp;similiar&nbsp;surnames</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="personrec">class <strong>personrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Base&nbsp;class&nbsp;for&nbsp;people&nbsp;records.&nbsp;This&nbsp;class&nbsp;is&nbsp;extended&nbsp;by&nbsp;<a href="#scoutrec">scoutrec</a>&nbsp;and<br>
+<a href="#adultrec">adultrec</a>&nbsp;clases<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="personrec-__init__"><strong>__init__</strong></a>(self, db, nScout_id)</dt><dd><tt>Instantiates&nbsp;the&nbsp;object.<br>
+Parameter<br>
+&nbsp;&nbsp;nScout_id&nbsp;-&nbsp;ID&nbsp;of&nbsp;the&nbsp;person&nbsp;(scout&nbsp;table)&nbsp;record&nbsp;to&nbsp;be&nbsp;accessed<br>
+Data&nbsp;attributes<br>
+&nbsp;&nbsp;From&nbsp;database&nbsp;record<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scout_id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;forename<br>
+&nbsp;&nbsp;&nbsp;&nbsp;initials<br>
+&nbsp;&nbsp;&nbsp;&nbsp;surname<br>
+&nbsp;&nbsp;&nbsp;&nbsp;addr1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;addr2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;addr3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p_code<br>
+&nbsp;&nbsp;&nbsp;&nbsp;telephone_h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;telephone_w<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fax<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mobile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;email<br>
+&nbsp;&nbsp;&nbsp;&nbsp;on_line_id&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scout_name&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gender&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;add_info&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date_of_birth&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status&nbsp;=&nbsp;''<br>
+&nbsp;<br>
+&nbsp;<br>
+&nbsp;&nbsp;Other<br>
+&nbsp;&nbsp;&nbsp;&nbsp;years&nbsp;=&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;months&nbsp;=&nbsp;0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;age&nbsp;=&nbsp;0.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dob&nbsp;=&nbsp;datetime.date(1990,&nbsp;1,&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;achievelist&nbsp;-&nbsp;Empty&nbsp;list&nbsp;of&nbsp;associated&nbsp;<a href="#achieverec">achieverec</a>&nbsp;objects.&nbsp;set&nbsp;by&nbsp;<a href="#personrec-achieve_list">achieve_list</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;achieve_wiplist&nbsp;-&nbsp;Empty&nbsp;list&nbsp;of&nbsp;associated&nbsp;<a href="#achieverec">achieverec</a>&nbsp;objects.&nbsp;set&nbsp;by&nbsp;<a href="#personrec-achieve_wip_list">achieve_wip_list</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;award_todolist&nbsp;-&nbsp;Empty&nbsp;list&nbsp;of&nbsp;associated&nbsp;<a href="#awardrec">awardrec</a>&nbsp;objects.&nbsp;set&nbsp;by&nbsp;<a href="#personrec-all_award_info">all_award_info</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rolelist&nbsp;-&nbsp;Empty&nbsp;list&nbsp;of&nbsp;associated&nbsp;<a href="#rolerec">rolerec</a>&nbsp;objects.&nbsp;set&nbsp;by&nbsp;<a href="#personrec-role_list">role_list</a>()&nbsp;method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;-&nbsp;set&nbsp;to&nbsp;1&nbsp;if&nbsp;record&nbsp;found<br>
+&nbsp;&nbsp;&nbsp;&nbsp;junior&nbsp;-&nbsp;set&nbsp;by&nbsp;<a href="#personrec-check_junior">check_junior</a>()&nbsp;method,&nbsp;is&nbsp;1&nbsp;if&nbsp;person&nbsp;should&nbsp;be&nbsp;treated&nbsp;as&nbsp;a&nbsp;junior</tt></dd></dl>
+
+<dl><dt><a name="personrec-achieve_list"><strong>achieve_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;achievements</tt></dd></dl>
+
+<dl><dt><a name="personrec-achieve_wip_list"><strong>achieve_wip_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;achievements&nbsp;in&nbsp;WIP&nbsp;status</tt></dd></dl>
+
+<dl><dt><a name="personrec-all_award_info"><strong>all_award_info</strong></a>(self)</dt><dd><tt>Collates&nbsp;all&nbsp;award&nbsp;and&nbsp;achievement&nbsp;info</tt></dd></dl>
+
+<dl><dt><a name="personrec-award_tbd"><strong>award_tbd</strong></a>(self, ou, curs, ach_list, ach_wiplist, awd_todolist)</dt><dd><tt>Checks&nbsp;for&nbsp;awards&nbsp;available&nbsp;to&nbsp;the&nbsp;ou&nbsp;that&nbsp;have&nbsp;not&nbsp;been&nbsp;achieved&nbsp;or&nbsp;worked&nbsp;on</tt></dd></dl>
+
+<dl><dt><a name="personrec-check_junior"><strong>check_junior</strong></a>(self, ourec, param)</dt><dd><tt>This&nbsp;procedure&nbsp;determines&nbsp;if&nbsp;a&nbsp;persn&nbsp;should&nbsp;be&nbsp;treated&nbsp;as&nbsp;a&nbsp;junior,&nbsp;i.e.&nbsp;needs&nbsp;guardians<br>
+It&nbsp;requires&nbsp;the&nbsp;ou&nbsp;instance&nbsp;to&nbsp;see&nbsp;if&nbsp;this&nbsp;is&nbsp;only&nbsp;for&nbsp;juniors<br>
+and&nbsp;also&nbsp;the&nbsp;param&nbsp;object&nbsp;to&nbsp;check&nbsp;which&nbsp;age&nbsp;someone&nbsp;should&nbsp;be&nbsp;a&nbsp;junior</tt></dd></dl>
+
+<dl><dt><a name="personrec-role_by_ou"><strong>role_by_ou</strong></a>(self, ou_id)</dt><dd><tt>Returns&nbsp;a&nbsp;role&nbsp;record&nbsp;for&nbsp;an&nbsp;ou&nbsp;and&nbsp;a&nbsp;person&nbsp;if&nbsp;it&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="personrec-role_list"><strong>role_list</strong></a>(self, status<font color="#909090">=''</font>)</dt><dd><tt>Populates&nbsp;the&nbsp;rolelist&nbsp;data&nbsp;attribute&nbsp;with&nbsp;<a href="#rolerec">rolerec</a>&nbsp;objects</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="rolerec">class <strong>rolerec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;role&nbsp;record<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="rolerec-__init__"><strong>__init__</strong></a>(self, db, nRole_id)</dt><dd><tt>Instantiates&nbsp;the&nbsp;object&nbsp;and&nbsp;sets&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes<br>
+Database<br>
+&nbsp;&nbsp;&nbsp;&nbsp;role_id&nbsp;(nRole_id&nbsp;from&nbsp;params)&nbsp;-&nbsp;Role&nbsp;ID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scout_id&nbsp;(0)&nbsp;-&nbsp;Scout&nbsp;ID&nbsp;associated&nbsp;with&nbsp;the&nbsp;role<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_id&nbsp;(0)&nbsp;-&nbsp;OU&nbsp;id&nbsp;this&nbsp;role&nbsp;references<br>
+&nbsp;&nbsp;&nbsp;&nbsp;security&nbsp;(0)&nbsp;-&nbsp;Integer&nbsp;indicatng&nbsp;level&nbsp;of&nbsp;security&nbsp;available<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Need&nbsp;further&nbsp;documentation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;('')&nbsp;-&nbsp;Display&nbsp;title<br>
+&nbsp;&nbsp;&nbsp;&nbsp;last_update&nbsp;-&nbsp;Date<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dt_appt&nbsp;-&nbsp;Creation&nbsp;date<br>
+&nbsp;&nbsp;&nbsp;&nbsp;role_ref&nbsp;(0)&nbsp;-&nbsp;Integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Needs&nbsp;furter&nbsp;documentation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;forename&nbsp;('')&nbsp;-&nbsp;Obtained&nbsp;from&nbsp;scout&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;initials&nbsp;('')&nbsp;-&nbsp;Obtained&nbsp;from&nbsp;scout&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;surname&nbsp;('')&nbsp;-&nbsp;Obtained&nbsp;from&nbsp;scout&nbsp;table<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status&nbsp;('')&nbsp;-&nbsp;Role&nbsp;status.&nbsp;Allowed&nbsp;values&nbsp;are&nbsp;???<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ou_order&nbsp;=&nbsp;1<br>
+&nbsp;<br>
+Other<br>
+&nbsp;&nbsp;&nbsp;&nbsp;database&nbsp;-&nbsp;DB&nbsp;instance&nbsp;from&nbsp;params<br>
+&nbsp;&nbsp;&nbsp;&nbsp;found&nbsp;(0)&nbsp;-&nbsp;Set&nbsp;to&nbsp;1&nbsp;if&nbsp;record&nbsp;found<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result&nbsp;=&nbsp;''</tt></dd></dl>
+
+<dl><dt><a name="rolerec-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;string&nbsp;of&nbsp;attributes&nbsp;for&nbsp;printing</tt></dd></dl>
+
+<dl><dt><a name="rolerec-add"><strong>add</strong></a>(self)</dt><dd><tt>Here&nbsp;for&nbsp;legacy&nbsp;reasons,&nbsp;simply&nbsp;calls&nbsp;add_update()</tt></dd></dl>
+
+<dl><dt><a name="rolerec-add_edit"><strong>add_edit</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="rolerec-delete"><strong>delete</strong></a>(self)</dt><dd><tt>Deletes&nbsp;the&nbsp;role&nbsp;records&nbsp;from&nbsp;the&nbsp;database</tt></dd></dl>
+
+<dl><dt><a name="rolerec-find_role"><strong>find_role</strong></a>(self, ou_id, scout_id)</dt><dd><tt>This&nbsp;function&nbsp;searches&nbsp;the&nbsp;database&nbsp;for&nbsp;the&nbsp;role&nbsp;record&nbsp;for&nbsp;this&nbsp;scout_id&nbsp;and&nbsp;ou_id<br>
+The&nbsp;usual&nbsp;attributes&nbsp;are&nbsp;set&nbsp;as&nbsp;in&nbsp;<a href="#rolerec-__init__">__init__</a>()</tt></dd></dl>
+
+<dl><dt><a name="rolerec-update"><strong>update</strong></a>(self)</dt><dd><tt>Here&nbsp;for&nbsp;legacy&nbsp;reasons,&nbsp;simply&nbsp;calls&nbsp;add_update()</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="scoutrec">class <strong>scoutrec</strong></a>(<a href="dbobj.html#personrec">personrec</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;scout&nbsp;record<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="scoutrec-__init__"><strong>__init__</strong></a>(self, db, nScout_id)</dt><dd><tt>Instantiates&nbsp;the&nbsp;scout&nbsp;record&nbsp;and&nbsp;sets&nbsp;the&nbsp;following&nbsp;data&nbsp;attributes&nbsp;that&nbsp;are&nbsp;in&nbsp;addition&nbsp;to&nbsp;the&nbsp;<a href="#personrec">personrec</a>&nbsp;instance<br>
+&nbsp;<br>
+&nbsp;&nbsp;parent1&nbsp;-&nbsp;ID&nbsp;of&nbsp;<a href="#adultrec">adultrec</a>,&nbsp;first&nbsp;parent&nbsp;of&nbsp;the&nbsp;scout<br>
+&nbsp;&nbsp;parent1_forename&nbsp;-&nbsp;Name&nbsp;from&nbsp;the&nbsp;above&nbsp;<a href="#adultrec">adultrec</a><br>
+&nbsp;&nbsp;parent1_surname&nbsp;-&nbsp;Ditto<br>
+&nbsp;&nbsp;parent2&nbsp;-&nbsp;ID&nbsp;of&nbsp;<a href="#adultrec">adultrec</a>,&nbsp;second&nbsp;parent,&nbsp;if&nbsp;they&nbsp;exist<br>
+&nbsp;&nbsp;parent2_forename&nbsp;-&nbsp;Name&nbsp;from&nbsp;the&nbsp;above&nbsp;<a href="#adultrec">adultrec</a><br>
+&nbsp;&nbsp;parent2_surname&nbsp;-&nbsp;Ditto<br>
+&nbsp;&nbsp;school&nbsp;('')&nbsp;-&nbsp;School&nbsp;attended<br>
+Obsolete&nbsp;entries&nbsp;not&nbsp;to&nbsp;be&nbsp;used<br>
+&nbsp;&nbsp;unit_id&nbsp;=&nbsp;0<br>
+&nbsp;&nbsp;unit_sect&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;sect_cd&nbsp;=&nbsp;''<br>
+&nbsp;&nbsp;ou_id&nbsp;=&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-add"><strong>add</strong></a>(self)</dt><dd><tt>Creates&nbsp;a&nbsp;new&nbsp;scout&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-ch_status"><strong>ch_status</strong></a>(self, new_status)</dt><dd><tt>Changes&nbsp;status&nbsp;of&nbsp;scout&nbsp;and&nbsp;updated&nbsp;the&nbsp;status&nbsp;change&nbsp;date</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-find_on_line_id"><strong>find_on_line_id</strong></a>(self, cOn_line_id)</dt><dd><tt>Returns&nbsp;of&nbsp;scout&nbsp;id&nbsp;if&nbsp;on-line_id&nbsp;found,&nbsp;otherwise&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-set_unit"><strong>set_unit</strong></a>(self, new_unit)</dt><dd><tt>Sets&nbsp;the&nbsp;unit&nbsp;connection&nbsp;for&nbsp;a&nbsp;scout&nbsp;record</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-update"><strong>update</strong></a>(self)</dt><dd><tt>Method&nbsp;to&nbsp;update&nbsp;scout&nbsp;record</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="dbobj.html#personrec">personrec</a>:<br>
+<dl><dt><a name="scoutrec-achieve_list"><strong>achieve_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;achievements</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-achieve_wip_list"><strong>achieve_wip_list</strong></a>(self)</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;achievements&nbsp;in&nbsp;WIP&nbsp;status</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-all_award_info"><strong>all_award_info</strong></a>(self)</dt><dd><tt>Collates&nbsp;all&nbsp;award&nbsp;and&nbsp;achievement&nbsp;info</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-award_tbd"><strong>award_tbd</strong></a>(self, ou, curs, ach_list, ach_wiplist, awd_todolist)</dt><dd><tt>Checks&nbsp;for&nbsp;awards&nbsp;available&nbsp;to&nbsp;the&nbsp;ou&nbsp;that&nbsp;have&nbsp;not&nbsp;been&nbsp;achieved&nbsp;or&nbsp;worked&nbsp;on</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-check_junior"><strong>check_junior</strong></a>(self, ourec, param)</dt><dd><tt>This&nbsp;procedure&nbsp;determines&nbsp;if&nbsp;a&nbsp;persn&nbsp;should&nbsp;be&nbsp;treated&nbsp;as&nbsp;a&nbsp;junior,&nbsp;i.e.&nbsp;needs&nbsp;guardians<br>
+It&nbsp;requires&nbsp;the&nbsp;ou&nbsp;instance&nbsp;to&nbsp;see&nbsp;if&nbsp;this&nbsp;is&nbsp;only&nbsp;for&nbsp;juniors<br>
+and&nbsp;also&nbsp;the&nbsp;param&nbsp;object&nbsp;to&nbsp;check&nbsp;which&nbsp;age&nbsp;someone&nbsp;should&nbsp;be&nbsp;a&nbsp;junior</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-role_by_ou"><strong>role_by_ou</strong></a>(self, ou_id)</dt><dd><tt>Returns&nbsp;a&nbsp;role&nbsp;record&nbsp;for&nbsp;an&nbsp;ou&nbsp;and&nbsp;a&nbsp;person&nbsp;if&nbsp;it&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="scoutrec-role_list"><strong>role_list</strong></a>(self, status<font color="#909090">=''</font>)</dt><dd><tt>Populates&nbsp;the&nbsp;rolelist&nbsp;data&nbsp;attribute&nbsp;with&nbsp;<a href="#rolerec">rolerec</a>&nbsp;objects</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="section_list">class <strong>section_list</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##############################################################################<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="section_list-__init__"><strong>__init__</strong></a>(self, db)</dt><dd><tt>This&nbsp;class&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;available&nbsp;section&nbsp;records</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="sectionrec">class <strong>sectionrec</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;class&nbsp;to&nbsp;abstract&nbsp;the&nbsp;section&nbsp;record<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="sectionrec-__init__"><strong>__init__</strong></a>(self, db, cSect_cd)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="sys_admin_msg_list">class <strong>sys_admin_msg_list</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>##############################################################################<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="sys_admin_msg_list-__init__"><strong>__init__</strong></a>(self, db, status<font color="#909090">='N'</font>)</dt><dd><tt>This&nbsp;class&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;messages&nbsp;for&nbsp;system&nbsp;administrators</tt></dd></dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-award_list"><strong>award_list</strong></a>(db, type)</dt><dd><tt>This&nbsp;procedure&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#awardrec">awardrec</a>&nbsp;instances&nbsp;for&nbsp;an&nbsp;<a href="#awardtyperec">awardtyperec</a></tt></dd></dl>
+ <dl><dt><a name="-curr_time"><strong>curr_time</strong></a>()</dt><dd><tt>Returns&nbsp;the&nbsp;current&nbsp;time&nbsp;formatted&nbsp;for&nbsp;input&nbsp;into&nbsp;the&nbsp;database</tt></dd></dl>
+ <dl><dt><a name="-log_action"><strong>log_action</strong></a>(db, conn_id, action, scout_id<font color="#909090">=0</font>, id1<font color="#909090">=0</font>, id2<font color="#909090">=0</font>, id3<font color="#909090">=0</font>)</dt><dd><tt>###############################################################################</tt></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-person_search"><strong>person_search</strong></a>(db, surname, forename<font color="#909090">=''</font>)</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;person&nbsp;records&nbsp;with&nbsp;the&nbsp;same&nbsp;name&nbsp;and&nbsp;surname</tt></dd></dl>
+ <dl><dt><a name="-rand_string"><strong>rand_string</strong></a>(nSize<font color="#909090">=20</font>)</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-scout_in_list"><strong>scout_in_list</strong></a>(list, in_scout_id)</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-sort_by_attr"><strong>sort_by_attr</strong></a>(seq, attr)</dt><dd><tt>This&nbsp;sort&nbsp;sequence&nbsp;was&nbsp;obtained&nbsp;from&nbsp;the&nbsp;python&nbsp;cookbook,&nbsp;1st&nbsp;edition,&nbsp;'recipe'&nbsp;no&nbsp;2.6<br>
+Credit&nbsp;Yakov&nbsp;Markovich,&nbsp;Nick&nbsp;Perkins</tt></dd></dl>
+ <dl><dt><a name="-sql_int_str"><strong>sql_int_str</strong></a>(nInt)</dt><dd><tt>Always&nbsp;returns&nbsp;a&nbsp;character&nbsp;integer</tt></dd></dl>
+ <dl><dt><a name="-sql_str"><strong>sql_str</strong></a>(cString)</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-struct_list"><strong>struct_list</strong></a>(db, no_mngt<font color="#909090">=0</font>, no_heir<font color="#909090">=0</font>)</dt><dd><tt>Returns&nbsp;list&nbsp;of&nbsp;available&nbsp;OU&nbsp;struct&nbsp;records</tt></dd></dl>
+ <dl><dt><a name="-subach_list"><strong>subach_list</strong></a>(db, nScout)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;sub&nbsp;achievement&nbsp;unit&nbsp;instances.&nbsp;Default&nbsp;order&nbsp;is&nbsp;date&nbsp;obtained</tt></dd></dl>
+ <dl><dt><a name="-sys_admin_list"><strong>sys_admin_list</strong></a>(db)</dt><dd><tt>This&nbsp;function&nbsp;returns&nbsp;a&nbsp;list&nbsp;of&nbsp;system&nbsp;administrators</tt></dd></dl>
+</td></tr></table>
+</body></html>

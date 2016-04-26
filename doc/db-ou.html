@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Org Unit Database class</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  <link rel="stylesheet" href="scout-doc.css" type="text/css">
+
+</head>
+
+
+<body style="background-color: rgb(255, 255, 255);">
+
+<h2><a name="ourec"></a>class ourec</h2>
+
+<blockquote>
+  <p>This class provide access to attributes of the
+organisational unit record of the scout DB.</p>
+
+</blockquote>
+
+<h3>Parameters </h3>
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-weight: bold;">Parameter name</td>
+
+      <td style="font-weight: bold;">Data type</td>
+
+      <td style="font-weight: bold;">Default</td>
+
+      <td style="font-weight: bold;">Description &amp;
+comments</td>
+
+    </tr>
+
+    <tr>
+
+      <td>db</td>
+
+      <td>database object</td>
+
+      <td>None</td>
+
+      <td>Database instance to use</td>
+
+    </tr>
+
+    <tr>
+
+      <td>nOu_id</td>
+
+      <td>integer</td>
+
+      <td>None</td>
+
+      <td>Unique identifier of OU instance to initialise</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+<ul>
+
+</ul>
+
+<h3>Properties </h3>
+
+<ul>
+
+</ul>
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-weight: bold;">Property name</td>
+
+      <td style="font-weight: bold;">Data type</td>
+
+      <td style="font-weight: bold;">Default</td>
+
+      <td style="font-weight: bold;">Description &amp;
+comments</td>
+
+    </tr>
+
+    <tr>
+
+      <td>database</td>
+
+      <td>database object</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>ou_id</td>
+
+      <td>integer</td>
+
+      <td></td>
+
+      <td>Unique identifier</td>
+
+    </tr>
+
+    <tr>
+
+      <td>name</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>ou_owner</td>
+
+      <td>int</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>ou_struct</td>
+
+      <td>int</td>
+
+      <td></td>
+
+      <td>References table ou_struct</td>
+
+    </tr>
+
+    <tr>
+
+      <td>struct_name</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td>from ou_struct</td>
+
+    </tr>
+
+    <tr>
+
+      <td>struct_parent</td>
+
+      <td>int</td>
+
+      <td></td>
+
+      <td>the ou_struct id of the parent of this level of the
+structure.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>curr_memb</td>
+
+      <td>int</td>
+
+      <td>0</td>
+
+      <td>Number of people who are members or management members.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>curr_child</td>
+
+      <td>int</td>
+
+      <td>0</td>
+
+      <td>Number of OU's that are children of this OU.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_addr1</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td>Physical address</td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_addr2</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_addr3</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_code</td>
+
+      <td>varchar(10)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_addr1</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td>Mailing address</td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_addr2</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_addr3</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_code</td>
+
+      <td>varchar(10)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>phone</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>fax</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>sect_cd</td>
+
+      <td>char(1)</td>
+
+      <td></td>
+
+      <td>Will be discontinued. scout section details to be held
+in ou_struct rec.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>meet_time</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>start_age</td>
+
+      <td>real</td>
+
+      <td></td>
+
+      <td>Specific to unit level, age at which children can join
+the unit.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>end_age</td>
+
+      <td>real</td>
+
+      <td></td>
+
+      <td>Specific to unit level, age at which children should
+leave the unit.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>award_remind</td>
+
+      <td>date</td>
+
+      <td></td>
+
+      <td>Date last award reminders were checked and/or sent out</td>
+
+    </tr>
+
+    <tr>
+
+      <td>found</td>
+
+      <td>int</td>
+
+      <td>0</td>
+
+      <td>Flag indicating if the record was found.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>childlist</td>
+
+      <td>list</td>
+
+      <td>undefined</td>
+
+      <td>Defined when method child_list is called. Contains a
+list of &nbsp;OU objects that are children of the current OU.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>heir_child_names</td>
+
+      <td>list</td>
+
+      <td>undefined</td>
+
+      <td>Defined when method child_list is called. Contains
+tuples
+containing ou_struct id's and names of possible child OU types from thr
+ou_struct table.</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<h3>Methods</h3>
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-weight: bold;">Method name</td>
+
+      <td style="font-weight: bold;">Parameters</td>
+
+      <td style="font-weight: bold;">Description / comments</td>
+
+    </tr>
+
+    <tr>
+
+      <td>update</td>
+
+      <td>none</td>
+
+      <td>Updates the OU record with vanues held in object
+properties.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>add</td>
+
+      <td>none</td>
+
+      <td>Creates an new OU record</td>
+
+    </tr>
+
+    <tr>
+
+      <td>delete</td>
+
+      <td>none</td>
+
+      <td>Deletes the OU after checking that there are no OU or
+people dependancies on it.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>child_list</td>
+
+      <td>none</td>
+
+      <td>Populates the property lists <span style="font-weight: bold;">childlist</span> and <span style="font-weight: bold;">heir_child_names</span> and
+returns childlist</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<ul>
+
+</ul>
+
+<br>
+
+</body>
+</html>

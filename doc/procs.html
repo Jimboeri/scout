@@ -1,0 +1,50 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module procs</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>procs</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/data1/dev/scout/py/procs.py">/data1/dev/scout/py/procs.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="webproc.html">webproc</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-all_int"><strong>all_int</strong></a>(cInp)</dt><dd><tt>Always&nbsp;returns&nbsp;an&nbsp;integer,&nbsp;returns&nbsp;0&nbsp;if&nbsp;none</tt></dd></dl>
+ <dl><dt><a name="-char_float"><strong>char_float</strong></a>(inp_char)</dt><dd><tt>Returns&nbsp;a&nbsp;floating&nbsp;number&nbsp;relating&nbsp;to&nbsp;charachter&nbsp;input.&nbsp;If&nbsp;an&nbsp;error,&nbsp;returns&nbsp;0</tt></dd></dl>
+ <dl><dt><a name="-char_int"><strong>char_int</strong></a>(inp_char)</dt><dd><tt>Returns&nbsp;an&nbsp;integer&nbsp;relating&nbsp;to&nbsp;character&nbsp;value.&nbsp;If&nbsp;an&nbsp;error&nbsp;returns&nbsp;0</tt></dd></dl>
+ <dl><dt><a name="-disp_line"><strong>disp_line</strong></a>(table, value1<font color="#909090">=''</font>, value2<font color="#909090">=''</font>, value3<font color="#909090">=''</font>)</dt><dd><tt>Displays&nbsp;values&nbsp;in&nbsp;a&nbsp;table</tt></dd></dl>
+ <dl><dt><a name="-edit_comment"><strong>edit_comment</strong></a>(table, descr, fld_name, fld_value, rows<font color="#909090">=5</font>, cols<font color="#909090">=80</font>, colspan<font color="#909090">=2</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;table&nbsp;row&nbsp;that&nbsp;will&nbsp;display&nbsp;a&nbsp;textarea&nbsp;box&nbsp;in&nbsp;an&nbsp;edit&nbsp;form</tt></dd></dl>
+ <dl><dt><a name="-edit_row"><strong>edit_row</strong></a>(table, descr, fld_name, fld_value, is_valid<font color="#909090">=1</font>, validation_msg<font color="#909090">=''</font>, req<font color="#909090">=0</font>, size<font color="#909090">=0</font>, maxlen<font color="#909090">=0</font>)</dt><dd><tt>Creates&nbsp;a&nbsp;table&nbsp;row&nbsp;that&nbsp;will&nbsp;display&nbsp;a&nbsp;field&nbsp;in&nbsp;an&nbsp;edit&nbsp;form<br>
+Parameters<br>
+&nbsp;&nbsp;table&nbsp;-&nbsp;a&nbsp;webproc.table()&nbsp;instance<br>
+&nbsp;&nbsp;descr&nbsp;-&nbsp;The&nbsp;description&nbsp;to&nbsp;be&nbsp;displayed<br>
+&nbsp;&nbsp;fld_name&nbsp;-&nbsp;The&nbsp;field&nbsp;name&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;the&nbsp;&lt;INPUT&gt;&nbsp;file<br>
+&nbsp;&nbsp;fld_value&nbsp;-&nbsp;The&nbsp;initial&nbsp;value&nbsp;of&nbsp;the&nbsp;field<br>
+&nbsp;&nbsp;is_valid&nbsp;(1)&nbsp;-&nbsp;is&nbsp;set&nbsp;is&nbsp;valid,&nbsp;otherwise&nbsp;the&nbsp;validation&nbsp;message&nbsp;is&nbsp;displayed<br>
+&nbsp;&nbsp;req&nbsp;(0)&nbsp;-&nbsp;If&nbsp;set&nbsp;to&nbsp;1,&nbsp;displays&nbsp;an&nbsp;asterisk&nbsp;to&nbsp;indicate&nbsp;the&nbsp;field&nbsp;is&nbsp;required<br>
+&nbsp;&nbsp;size&nbsp;(0)&nbsp;-&nbsp;If&nbsp;set&nbsp;will&nbsp;be&nbsp;used&nbsp;to&nbsp;define&nbsp;the&nbsp;display&nbsp;size&nbsp;of&nbsp;the&nbsp;field<br>
+&nbsp;&nbsp;maxlen&nbsp;(0)&nbsp;_&nbsp;If&nbsp;set&nbsp;used&nbsp;to&nbsp;define&nbsp;the&nbsp;maxlen&nbsp;of&nbsp;the&nbsp;&lt;INPUT?&nbsp;field</tt></dd></dl>
+ <dl><dt><a name="-pr_str"><strong>pr_str</strong></a>(inp_string)</dt><dd><tt>Always&nbsp;returns&nbsp;a&nbsp;printable&nbsp;string,&nbsp;even&nbsp;if&nbsp;input&nbsp;is&nbsp;None</tt></dd></dl>
+ <dl><dt><a name="-rand_string"><strong>rand_string</strong></a>(nSize<font color="#909090">=20</font>)</dt><dd><tt>Returns&nbsp;a&nbsp;string&nbsp;of&nbsp;random&nbsp;characters&nbsp;that&nbsp;is&nbsp;nSize&nbsp;long</tt></dd></dl>
+ <dl><dt><a name="-val_date"><strong>val_date</strong></a>(cInp_dt)</dt><dd><tt>Character&nbsp;date&nbsp;validation&nbsp;routine</tt></dd></dl>
+</td></tr></table>
+</body></html>

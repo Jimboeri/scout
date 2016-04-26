@@ -1,0 +1,501 @@
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou;
+select * from ou_disp;
+select * from ou_disp;
+\q
+\d ou_disp
+\q
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+vacuum;
+select * from ou_disp;
+\d
+select * from ou_disp;
+delete from ou_disp where ou_id = 9;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+\q
+select * from ou_disp;
+\q
+\q
+select * from ou_disp;
+\q
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+\d
+select * from ou_disp;
+select * from scout where scout_id = 1;
+select superuser from scout where scout_id = 1;
+\q
+\d scout
+\d scout
+select * from role;
+select * from role where ou_id = 11;
+\q
+select * from ou_disp;
+select * from ou_disp;
+select * from ou_disp;
+update ou_disp set show_actions=1 where ou_id=9 and conn_id=1;
+select * from ou_disp;
+exit
+\q
+select * from ou_disp;
+select * from ou_disp;
+\q
+select * from scout where surname = 'Wright';
+select * from scout where scout_id = 5;
+\q
+select * from role where scout_id = 5;
+update role set ou_order = 9999999999 where ou_id = 0;
+update role set ou_order = 9999 where ou_id = 0;
+select * from role where scout_id = 5;
+select * from role where scout_id = 5 and ou_order = 1;
+\q
+select * from role where scout_id = 5;
+\q
+select * from role where scout_id = 5;
+update role set ou_order = 10 where role_id = 532;
+update role set ou_order = 20 where role_id = 495;
+update role set ou_order = 30 where role_id = 511;
+update role set ou_order = 40 where role_id = 478;
+select * from role where scout_id = 5;
+\q
+select * from ou where ou_id = 13;
+select * from ou where ou_id = 28;
+\q
+\?
+\du
+\c scoutdb
+\du
+\c scout
+\du
+\q
+\dt
+select * from contact;
+\d section
+\d
+\q
+delete from connection;
+select * from connection;
+\q
+select * from connection;
+delete from connection where scout_id != 0;
+select * from connection;
+delete from connection where scout_id = 0;
+select * from connection;
+select * from connection;
+select * from connection;
+select * from connection;
+\q
+\q
+select * from ou order by ou_id;
+select * from role where ou_id = 2;
+\q
+select * from role where ou_id = 2;
+\q
+select * from role where ou_id = 2;
+\q
+select * from role;
+select * from role;
+select * from role;
+ delete from role where level_ref = ' ' and level_id = 0 and ou_id = 0;
+select * from role;
+ delete from role where level_ref = ' ' ou_id = 0;
+ delete from role where level_ref = ' ' and ou_id = 0;
+ delete from role where level_ref = ' ' ou_id = 0;
+select * from role;
+ delete from role where level_ref = '' ou_id = 0;
+ delete from role where level_ref = '' and ou_id = 0;
+select level_ref, ou_id from role;
+select * from role where level_ref = ' ';
+select * from role where level_ref = '';
+select * from role where level_ref is empty;
+select * from role where level_ref is null;
+ delete from role where level_ref is null and ou_id = 0;
+select * from role;
+\q
+vacuum;
+\c scoutuat
+vacuum;
+\c scout
+vacuum;
+\q
+select * from scout where forename = 'Ger';
+select * from scout where surname = 'W';
+select * from scout where surname = 'West';
+select * from scout;
+select * from scout where surname = 'Builder';
+select * from role where scout_id = 15;
+select * from role where scout_id = 15;
+\q
+select * from ou_disp;
+\d ou_disp
+\q
+select * from ou_struct;
+\q
+select * from ou_struct;
+select * from ou;
+\d ou
+\q
+\d scout
+select * from scout where scout_name != '';
+select scout_id,scout_name from scout;
+select scout_id,scout_name from scout;
+select scout_id,scout_name from scout;
+\q
+\d scout
+select scout_id, on_line_id from scout;
+\q
+select * from role;
+select * from role ;
+select * from scout where surname = 'Williams';
+select * from scout where scout_id = 44;
+select * from role where scout_id = 44;
+select * from role where scout_id = 44;
+\q
+\d
+\d section
+select * from section;
+select * from ou_struct;
+\d section
+\d section
+\d ou_struct
+\q
+\d ou
+\q
+select * from ou_struct;
+vacuum;
+select * from ou order by ou_id;
+select * from ou_struct;
+select * from ou order by ou_id;
+select ou_struct, parent_id, s_name from ou order by ou_id;
+select ou_struct, parent_id, s_name from ou_struct;
+select ou_id, ou_owner, mngt from ou order by ou_id;
+select ou_id, ou_owner, mngt, name from ou order by ou_id;
+select ou_struct, parent_id, s_name from ou_struct;
+select ou_struct, parent_id, s_name, mngt from ou_struct;
+select ou_id, ou_owner, mngt, name from ou order by ou_id;
+select ou_id, ou_owner, mngt, name from ou order by ou_id;
+select ou_id, ou_owner, mngt, name from ou order by ou_id;
+select ou_id, ou_owner, mngt, name from ou order by ou_id;
+select * from award_type;
+select * from award_type;
+select * from award_type;
+\d award_type
+select ou_struct, parent_id, s_name, mngt from ou_struct;
+\d ou_struct
+select ou_struct, parent_id, s_name, mngt, hierarchic from ou_struct;
+select ou_struct, parent_id, s_name, mngt, hierarchic from ou_struct;
+select ou_struct, parent_id, s_name, mngt, heirarchic from ou_struct;
+\d award
+\d award
+\d award_type
+\d award_type
+select * from award_type;
+\d award
+select * from award;
+select * from role;
+select ou_id, role_id from role;
+delete from role where ou_id = 0;
+vacuum;
+\q
+delete from role where ou_id = 0;
+\q
+\d
+\d awardsub
+\q
+\d achieve
+\d award
+\q
+\d
+\d achievesub
+\q
+\d
+\d acheievsub
+\d achievsub
+\d achievesub
+\q
+\d achievesub
+\d
+\d awardsub
+\d achievesub
+\q
+select * from pg_stat_activity;
+select * from pg_stat_database;
+select * from pg_stat_database;
+select * from pg_stat_all_indices;
+select * from pg_stat_all_indexes;
+select * from pg_stat_all_indexes;
+vacuum;
+analyse;
+select * from pg_stat_all_indexes;
+select * from pg_stat_statio_user_tables;
+select * from pg_statio_user_tables;
+\q
+vacuum;
+analyse;
+\q
+\d ou
+select ou_id, name, start_age, end_age from ou;
+select ou_id, name, start_age, end_age from ou_struct;
+select ou_struct, name, start_age, end_age from ou_struct;
+select ou_struct, start_age, end_age from ou_struct;
+\d ou_struct
+select ou_struct, s_name, s_start_age, s_end_age from ou_struct;
+select ou_id, name, start_age, end_age from ou_struct;
+\q
+/?
+?
+\?
+\l
+/c general
+\c general
+\?
+\d
+\dt
+select * from users;
+select * from users;
+\d users
+\q
+select * from users;
+\q
+\d
+select * from scout where surname = 'West';
+selct * from achievesub;
+\d
+select * from achievesub where scout_id = 2;
+select * from achievesub where scout_id = 2 order by dt_obtained;
+\q
+select * from achievesub where scout_id = 2 order by dt_obtained;
+\q
+\d scout
+\q
+\d
+\d award
+select award_id, name from award;
+\d achieve
+select scout_id, award_id, awd_presented, status from achieve where award_id = 16;
+select a.scout_id, a.award_id, a.awd_presented, a.status, s.name, s.surname from achieve a, scout s where award_id = 16 and a.scout_id = s.scout_id;
+select a.scout_id, a.award_id, a.awd_presented, a.status, s.forename, s.surname from achieve a, scout s where award_id = 16 and a.scout_id = s.scout_id;
+select a.scout_id, a.award_id, a.awd_presented, a.status, s.forename, s.surname from achieve a, scout s where award_id = 16 and a.scout_id = s.scout_id and awd_presented = 0;
+delete from achieve where award_id = 16 and awd_presented = 0;
+select a.scout_id, a.award_id, a.awd_presented, a.status, s.forename, s.surname from achieve a, scout s where award_id = 16 and a.scout_id = s.scout_id and awd_presented = 0;
+\q
+select * from scout where surname = 'Miller';
+select * from scout where scout_id = 9
+;
+\d
+select * from award;
+select * from scout where surname = 'West';
+\d
+\d achievesub
+select * from achievesub where scout_id = 2 and award_id = 38 order by dt_obtained;
+select * from achievesub where scout_id = 9 and award_id = 38 order by dt_obtained;
+\q
+select * from role where scout_id = 25;
+\q
+select * from role where scout_id = 25;
+\q
+select * from ou;
+select * from ou;
+\d ou
+\q
+\d
+select * from club;
+\q
+select * from scout order by scout_id;
+ \d role
+select * from role where scout_id = 49;
+select * from role order by scout_id;
+\q
+\l
+\q
+\d
+\q
+\d
+\d image
+\q
+\d photo
+\d image
+\q
+\d image
+\q
+\d
+drop table image;
+drop seq img_seq;
+drop sequence img_seq;
+\q
+\d
+\q
+select * from scout where scout_id = 1;
+\q
+\d ou_disp
+\q
+select * from connection nection;
+\q
+select * from person
+;
+\q
+select * from person;
+\q
+select * from person;
+\d person
+\q
+select * from person;
+\q
+\q
+select * from person;
+\q
+vacuum;
+\q
+\d person
+\d person
+\d param
+\d person
+exit
+\q
+\q
+vacuum;
+\q
+vacuum;
+\d
+\d person
+ALTER TABLE person ADD reg_code char(40);
+\d
+\d person
+alter table person drop reg_code;
+\q
+\d scout
+\d connection
+\c ejedv
+\c ejdev
+\d person
+\q
+select nextval('pers_seq');
+select nextval('pers_seq');
+\q
+\d person
+select * from param
+;
+\q
+select * from param;
+\q
+select * from ou;
+\q
+vacuum;
+\?
+\q
+\d
+vacuum;
+vacuum;
+\c ejdev
+vacuum;
+\q
+\q
+analyse;
+vacuum;
+commit;
+\q
+\d member
+\d person
+select * from member;
+\q
+\d member
+\q
+\d member
+\q
+\d
+select * from o_program;
+\q
+\d o_program
+\d ou
+\q
+alter table ou add curr_memb integer;
+alter table ou add curr_child integer;
+\d ou
+select * from ou;
+select * from ou;
+\q
+\d member
+\d member
+select * from ou;
+select * from ou;
+select * member;
+select * from member;
+select * from member;
+\d o_program
+select * from o_program;
+select * from o_program;
+select * from o_program;
+\q
+\d p_session
+\q
+\d p_session
+\d p_session
+\d p_session
+\d
+\q
+\d
+\d p_session
+\q
+\d
+\d p_session
+\q
+\d
+select * from o_program;
+select * from member;
+select * from person;
+\q
+\d connection
+\q
+select * from person;
+\q
+\d
+select * from ou_struct;
+\q
+select * from role;
+ select * from scout where surname = 'Bagshaw':
+;
+ select * from scout where surname = 'Bagshaw';
+\q
+select * from ou_struct;
+\q
+\d connection
+select * from scout where addr2 = 'Level 2';
+select scout_id, forename, surname  from scout where surname = 'Owl';
+update scout set addr2 = 'Level 2' where scout_id = 60;
+update scout set addr3 = 'Forest' where scout_id = 60;
+update scout set p_code = '2222' where scout_id = 60;
+update scout set telephone_w = '3332222' where scout_id = 60;
+update scout set telephone_h = '7856876222' where scout_id = 60;
+update scout set email = 'blag@ljkhkh.cuih' where scout_id = 60;
+update scout set mobile = '897698798' where scout_id = 60;
+select scout_id, forename, surname  from scout where surname = '';
+delete from scout where scout_id = 75;
+select scout_id, forename, surname  from scout where surname = '';
+select scout_id, forename, surname  from scout where scout_id = 69;
+select scout_id, forename, surname, parent1, parent2 from scout where forename = 'Shaun';
+update scout set mobile = '897698798' where scout_id = 60;
+\q
+\d ou
+\q
+\d achieve
+select * from achieve;
+\q
+\d achieve
+\q
+vacuum;
+\c scout
+vacuum;
+\q
+\s ou_struct

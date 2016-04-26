@@ -1,0 +1,64 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module signinproc</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>signinproc</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/data1/dev/scout/py/signinproc.py">/data1/dev/scout/py/signinproc.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cgi.html">cgi</a><br>
+<a href="dbobj.html">dbobj</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="smtplib.html">smtplib</a><br>
+<a href="string.html">string</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="syslog.html">syslog</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="traceback.html">traceback</a><br>
+<a href="webproc.html">webproc</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-login_form"><strong>login_form</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>, next_proc<font color="#909090">=''</font>)</dt><dd><tt>This&nbsp;procedure&nbsp;displays&nbsp;a&nbsp;form&nbsp;to&nbsp;allow&nbsp;a&nbsp;user&nbsp;to&nbsp;sign&nbsp;in</tt></dd></dl>
+ <dl><dt><a name="-login_proc"><strong>login_proc</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;login&nbsp;form.<br>
+The&nbsp;module&nbsp;requires&nbsp;the&nbsp;username&nbsp;(li_name)&nbsp;and&nbsp;password&nbsp;(li_password)&nbsp;to&nbsp;be&nbsp;passed&nbsp;from&nbsp;the&nbsp;form.<br>
+Errors&nbsp;returned&nbsp;if:<br>
+&nbsp;&nbsp;li_name&nbsp;not&nbsp;present<br>
+&nbsp;&nbsp;user&nbsp;name&nbsp;not&nbsp;found&nbsp;in&nbsp;DB<br>
+&nbsp;&nbsp;password&nbsp;invalid<br>
+If&nbsp;the&nbsp;user&nbsp;has&nbsp;not&nbsp;agreed&nbsp;to&nbsp;the&nbsp;online&nbsp;agreement,&nbsp;it&nbsp;is&nbsp;presented&nbsp;for&nbsp;acceptance&nbsp;(<a href="#-olf_agree">olf_agree</a>()&nbsp;in&nbsp;signinproc.py)<br>
+The&nbsp;connection&nbsp;record&nbsp;is&nbsp;updated<br>
+Control&nbsp;passed&nbsp;to&nbsp;the&nbsp;following&nbsp;procedures&nbsp;based&nbsp;on&nbsp;'next_proc'&nbsp;parameter:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achievef_present()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;awardf_disp()<br>
+&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;home_page()</tt></dd></dl>
+ <dl><dt><a name="-logout_form"><strong>logout_form</strong></a>(form, db, param, conn)</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-olf_agree"><strong>olf_agree</strong></a>(form, db, param, conn, cScout_id, CPass)</dt><dd><tt>Displays&nbsp;on&nbsp;line&nbsp;agreement&nbsp;and&nbsp;asks&nbsp;for&nbsp;acceptance</tt></dd></dl>
+ <dl><dt><a name="-olp_agree"><strong>olp_agree</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;login&nbsp;agreement&nbsp;form</tt></dd></dl>
+ <dl><dt><a name="-passwdf_edit"><strong>passwdf_edit</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>This&nbsp;form&nbsp;displays&nbsp;a&nbsp;password&nbsp;change&nbsp;dialog</tt></dd></dl>
+ <dl><dt><a name="-passwdp_edit"><strong>passwdp_edit</strong></a>(form, db, param, conn)</dt><dd><tt>Process&nbsp;the&nbsp;change&nbsp;password&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-profile"><strong>profile</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>This&nbsp;form&nbsp;displays&nbsp;options&nbsp;to&nbsp;manage&nbsp;a&nbsp;users&nbsp;personal&nbsp;settings</tt></dd></dl>
+ <dl><dt><a name="-pwhint_f1"><strong>pwhint_f1</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-pwhint_p1"><strong>pwhint_p1</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;password&nbsp;hint&nbsp;form</tt></dd></dl>
+ <dl><dt><a name="-pwhint_p2"><strong>pwhint_p2</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Processes&nbsp;the&nbsp;second&nbsp;input&nbsp;from&nbsp;the&nbsp;password&nbsp;hint&nbsp;form</tt></dd></dl>
+ <dl><dt><a name="-set_homef_edit"><strong>set_homef_edit</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>This&nbsp;form&nbsp;displays&nbsp;options&nbsp;to&nbsp;change&nbsp;a&nbsp;users&nbsp;home&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-set_homep_edit"><strong>set_homep_edit</strong></a>(form, db, param, conn)</dt><dd><tt>##############################################################################</tt></dd></dl>
+</td></tr></table>
+</body></html>

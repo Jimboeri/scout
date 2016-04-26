@@ -1,0 +1,140 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module scout</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>scout</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/data1/dev/scout/py/scout.py">/data1/dev/scout/py/scout.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="Cookie.html">Cookie</a><br>
+<a href="cgi.html">cgi</a><br>
+<a href="cgitb.html">cgitb</a><br>
+<a href="dbobj.html">dbobj</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="ou.html">ou</a><br>
+<a href="random.html">random</a><br>
+<a href="string.html">string</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="syslog.html">syslog</a><br>
+<a href="time.html">time</a><br>
+<a href="traceback.html">traceback</a><br>
+</td><td width="25%" valign=top><a href="webproc.html">webproc</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-add_parent"><strong>add_parent</strong></a>(list, parent)</dt><dd><tt>##############################################################################</tt></dd></dl>
+ <dl><dt><a name="-adultf_add"><strong>adultf_add</strong></a>(form, db, param, conn)</dt><dd><tt>Displays&nbsp;form&nbsp;required&nbsp;to&nbsp;add&nbsp;a&nbsp;adult,&nbsp;not&nbsp;associated&nbsp;with&nbsp;any&nbsp;scout</tt></dd></dl>
+ <dl><dt><a name="-adultp_add"><strong>adultp_add</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;adult&nbsp;add&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-disp_if_not_blank"><strong>disp_if_not_blank</strong></a>(table, descr, value)</dt><dd><tt>Adds&nbsp;a&nbsp;new&nbsp;line&nbsp;to&nbsp;the&nbsp;table&nbsp;if&nbsp;the&nbsp;value&nbsp;is&nbsp;not&nbsp;blank</tt></dd></dl>
+ <dl><dt><a name="-parent1f_mod1"><strong>parent1f_mod1</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Parent1&nbsp;modify&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parent1p_mod"><strong>parent1p_mod</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;parent&nbsp;1&nbsp;modification&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parent2f_add"><strong>parent2f_add</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Parent2&nbsp;add&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parent2f_remove"><strong>parent2f_remove</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Parent2&nbsp;removal&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parent2p_add"><strong>parent2p_add</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;parent&nbsp;2&nbsp;add&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parent2p_remove"><strong>parent2p_remove</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;parent&nbsp;2&nbsp;removal&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parentf_edit"><strong>parentf_edit</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Parent&nbsp;edit&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parentp_edit"><strong>parentp_edit</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;parent&nbsp;edit&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-parents_in_sub_ou"><strong>parents_in_sub_ou</strong></a>(ourec, parentlist, in_surname)</dt><dd><tt>This&nbsp;procedure&nbsp;is&nbsp;used&nbsp;iteratively&nbsp;to&nbsp;process&nbsp;all&nbsp;OU's&nbsp;in&nbsp;a&nbsp;heirarchy</tt></dd></dl>
+ <dl><dt><a name="-scoutf1_add"><strong>scoutf1_add</strong></a>(form, db, param, conn)</dt><dd><tt>Displays&nbsp;first&nbsp;form&nbsp;required&nbsp;to&nbsp;add&nbsp;a&nbsp;new&nbsp;scout.<br>
+This&nbsp;form&nbsp;collects&nbsp;the&nbsp;first&nbsp;name&nbsp;and&nbsp;surname&nbsp;only,&nbsp;then&nbsp;links&nbsp;to&nbsp;<a href="#-scoutf3_junioradd">scoutf3_junioradd</a>()<br>
+&nbsp;&nbsp;if&nbsp;the&nbsp;OU&nbsp;is&nbsp;for&nbsp;junior&nbsp;members&nbsp;(under&nbsp;14)&nbsp;or&nbsp;to&nbsp;<a href="#-scoutf2_add">scoutf2_add</a>()&nbsp;for&nbsp;all&nbsp;other&nbsp;members<br>
+&nbsp;<br>
+Required&nbsp;form&nbsp;fields<br>
+&nbsp;&nbsp;ou_id<br>
+&nbsp;<br>
+Calls&nbsp;<br>
+&nbsp;&nbsp;ou.home_page()<br>
+&nbsp;&nbsp;<a href="#-scoutf_sub_name">scoutf_sub_name</a>()<br>
+Screen&nbsp;has&nbsp;links&nbsp;to<br>
+&nbsp;&nbsp;<a href="#-scoutf2_add">scoutf2_add</a>()</tt></dd></dl>
+ <dl><dt><a name="-scoutf2_add"><strong>scoutf2_add</strong></a>(form, db, param, conn)</dt><dd><tt>Displays&nbsp;form&nbsp;required&nbsp;to&nbsp;add&nbsp;a&nbsp;new&nbsp;adult&nbsp;scout/member<br>
+This&nbsp;screen&nbsp;is&nbsp;called&nbsp;if&nbsp;the&nbsp;calling&nbsp;OU&nbsp;does&nbsp;not&nbsp;specify&nbsp;that&nbsp;members&nbsp;are&nbsp;under&nbsp;14<br>
+&nbsp;<br>
+Calls:<br>
+&nbsp;&nbsp;ou.home_page()<br>
+&nbsp;&nbsp;<a href="#-scoutf1_add">scoutf1_add</a>()<br>
+&nbsp;&nbsp;<a href="#-scoutf_sub_name">scoutf_sub_name</a>()<br>
+Links&nbsp;to:<br>
+&nbsp;&nbsp;<a href="#-scoutp1_add">scoutp1_add</a>()<br>
+&nbsp;&nbsp;<a href="#-scoutp2_add">scoutp2_add</a>()</tt></dd></dl>
+ <dl><dt><a name="-scoutf3_junioradd"><strong>scoutf3_junioradd</strong></a>(form, db, param, conn)</dt><dd><tt>Displays&nbsp;form&nbsp;required&nbsp;to&nbsp;add&nbsp;a&nbsp;new&nbsp;junior&nbsp;scout/member<br>
+This&nbsp;screen&nbsp;is&nbsp;called&nbsp;if&nbsp;the&nbsp;calling&nbsp;OU&nbsp;does&nbsp;not&nbsp;specify&nbsp;that&nbsp;members&nbsp;are&nbsp;under&nbsp;14<br>
+&nbsp;<br>
+Calls:<br>
+&nbsp;&nbsp;ou.home_page()<br>
+&nbsp;&nbsp;<a href="#-scoutf1_add">scoutf1_add</a>()<br>
+&nbsp;&nbsp;<a href="#-scoutf_sub_name">scoutf_sub_name</a>()<br>
+Links&nbsp;to:<br>
+&nbsp;&nbsp;<a href="#-scoutp1_add">scoutp1_add</a>()<br>
+&nbsp;&nbsp;<a href="#-scoutp2_add">scoutp2_add</a>()</tt></dd></dl>
+ <dl><dt><a name="-scoutf_disp"><strong>scoutf_disp</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>, scout_id<font color="#909090">=0</font>, ou_id<font color="#909090">=0</font>)</dt><dd><tt>Displays&nbsp;scout&nbsp;details<br>
+Function&nbsp;acceps&nbsp;the&nbsp;following&nbsp;parameters<br>
+&nbsp;&nbsp;scout_id<br>
+&nbsp;&nbsp;ou_id<br>
+The&nbsp;following&nbsp;cgi&nbsp;form&nbsp;fields&nbsp;are&nbsp;also&nbsp;accepted<br>
+&nbsp;&nbsp;scout_id<br>
+&nbsp;&nbsp;ou_id<br>
+&nbsp;&nbsp;disp_ou&nbsp;-&nbsp;if&nbsp;defined&nbsp;says&nbsp;which&nbsp;ou&nbsp;to&nbsp;display&nbsp;if&nbsp;cancelling&nbsp;this&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-scoutf_edit"><strong>scoutf_edit</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Scout&nbsp;edit&nbsp;form.<br>
+Requires&nbsp;both&nbsp;the&nbsp;scout_id&nbsp;and&nbsp;the&nbsp;ou_id&nbsp;for&nbsp;the&nbsp;relevant&nbsp;ou&nbsp;as&nbsp;this&nbsp;defines&nbsp;some&nbsp;options<br>
+Also&nbsp;uses&nbsp;the&nbsp;following&nbsp;form&nbsp;fields&nbsp;to&nbsp;decide&nbsp;which&nbsp;screen&nbsp;to&nbsp;return&nbsp;to<br>
+&nbsp;&nbsp;nxt_module<br>
+&nbsp;&nbsp;nxt_prog</tt></dd></dl>
+ <dl><dt><a name="-scoutf_inactive"><strong>scoutf_inactive</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Form&nbsp;to&nbsp;display&nbsp;to&nbsp;confirm&nbsp;scout&nbsp;being&nbsp;made&nbsp;non-current</tt></dd></dl>
+ <dl><dt><a name="-scoutf_renew"><strong>scoutf_renew</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Form&nbsp;to&nbsp;display&nbsp;to&nbsp;confirm&nbsp;scout&nbsp;having&nbsp;membership&nbsp;renewed</tt></dd></dl>
+ <dl><dt><a name="-scoutf_sendup"><strong>scoutf_sendup</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Form&nbsp;to&nbsp;display&nbsp;to&nbsp;confirm&nbsp;scout&nbsp;going&nbsp;up&nbsp;to&nbsp;the&nbsp;next&nbsp;unit</tt></dd></dl>
+ <dl><dt><a name="-scoutf_sub_name"><strong>scoutf_sub_name</strong></a>(table, ou, cSubmitted, cScout_forename, cScout_initials, cScout_surname)</dt><dd><tt>Common&nbsp;routine&nbsp;for&nbsp;displaying&nbsp;scout&nbsp;name&nbsp;details&nbsp;in&nbsp;add&nbsp;screens<br>
+Links&nbsp;to:<br>
+&nbsp;&nbsp;ou.ouf_disp()</tt></dd></dl>
+ <dl><dt><a name="-scoutf_transfer"><strong>scoutf_transfer</strong></a>(form, db, param, conn, message<font color="#909090">=''</font>)</dt><dd><tt>Form&nbsp;to&nbsp;display&nbsp;to&nbsp;confirm&nbsp;scout&nbsp;transfer&nbsp;to&nbsp;another&nbsp;unit</tt></dd></dl>
+ <dl><dt><a name="-scoutp1_add"><strong>scoutp1_add</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;scout&nbsp;add&nbsp;screen&nbsp;for&nbsp;adults</tt></dd></dl>
+ <dl><dt><a name="-scoutp2_add"><strong>scoutp2_add</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;already&nbsp;existing&nbsp;scout&nbsp;add&nbsp;screen<br>
+This&nbsp;module&nbsp;adds&nbsp;a&nbsp;role&nbsp;record&nbsp;to&nbsp;link&nbsp;this&nbsp;member&nbsp;with&nbsp;this&nbsp;OU<br>
+Then&nbsp;it&nbsp;call&nbsp;ou.ouf_disp()</tt></dd></dl>
+ <dl><dt><a name="-scoutp3_add"><strong>scoutp3_add</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;Junior&nbsp;scout&nbsp;add&nbsp;screen&nbsp;for&nbsp;Juniors<br>
+Called&nbsp;by&nbsp;:&nbsp;<a href="#-scoutf3_junioradd">scoutf3_junioradd</a>()<br>
+Calls&nbsp;ou.ouf_disp<br>
+Initialises&nbsp;variables&nbsp;from&nbsp;form&nbsp;input<br>
+Validates&nbsp;OU&nbsp;and&nbsp;user&nbsp;security<br>
+Validates&nbsp;required&nbsp;fields:<br>
+&nbsp;&nbsp;Junior&nbsp;birthday<br>
+&nbsp;&nbsp;Parent&nbsp;name&nbsp;&amp;&nbsp;surname<br>
+&nbsp;&nbsp;Parent&nbsp;address<br>
+Adds&nbsp;a&nbsp;scout&nbsp;record<br>
+Adds&nbsp;parent(s)&nbsp;records<br>
+adds&nbsp;a&nbsp;role&nbsp;record&nbsp;for&nbsp;the&nbsp;scout</tt></dd></dl>
+ <dl><dt><a name="-scoutp_edit"><strong>scoutp_edit</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;scout&nbsp;edit&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-scoutp_inactive"><strong>scoutp_inactive</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;scout&nbsp;inactivation&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-scoutp_renew"><strong>scoutp_renew</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;scout&nbsp;renewal&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-scoutp_sendup"><strong>scoutp_sendup</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;scout&nbsp;send&nbsp;up&nbsp;screen</tt></dd></dl>
+ <dl><dt><a name="-scoutp_transfer"><strong>scoutp_transfer</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;input&nbsp;from&nbsp;the&nbsp;scout&nbsp;transfer&nbsp;screen</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>cAct</strong> = ''<br>
+<strong>cCookie</strong> = 'Set-Cookie: 6791329269=48923846884272286749; Max-Age=31536000;'<br>
+<strong>conn</strong> = &lt;dbobj.connectrec instance&gt;<br>
+<strong>db</strong> = &lt;dbobj.dbinstance instance&gt;<br>
+<strong>form</strong> = FieldStorage(None, None, [])<br>
+<strong>oCookie</strong> = &lt;SimpleCookie: 6791329269='48923846884272286749'&gt;<br>
+<strong>param</strong> = &lt;dbobj.paramrec instance&gt;</td></tr></table>
+</body></html>

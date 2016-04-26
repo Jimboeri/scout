@@ -1,0 +1,632 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  
+
+
+  
+  <title>DB scout record</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+  
+  <link rel="stylesheet" href="scout-doc.css" type="text/css">
+</head>
+
+
+<body style="background-color: rgb(255, 255, 255);">
+
+
+<h2>class scoutrec</h2>
+
+
+<blockquote>
+  
+  <p>This object is an instance of a single scout and associated information.</p>
+
+
+</blockquote>
+
+
+<h3>Parameters </h3>
+
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="font-weight: bold;">Parameter name</td>
+
+
+      <td style="font-weight: bold;">Data type</td>
+
+
+      <td style="font-weight: bold;">Default</td>
+
+
+      <td style="font-weight: bold;">Description &amp;
+comments</td>
+
+
+    </tr>
+
+
+    <tr>
+
+      <td>db</td>
+
+      <td>database object</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>nScout_id</td>
+
+      <td>integer</td>
+
+      <td></td>
+
+      <td>Unique identifier of scout</td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<ul>
+
+
+</ul>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+</ul>
+
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="font-weight: bold;">Property name</td>
+
+
+      <td style="font-weight: bold;">Data type</td>
+
+
+      <td style="font-weight: bold;">Default</td>
+
+
+      <td style="font-weight: bold;">Description &amp;
+comments</td>
+
+
+    </tr>
+
+
+    <tr>
+
+      <td>database</td>
+
+      <td>database instance</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>scout_id</td>
+
+      <td>integer</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>unit_id</td>
+
+      <td>integer</td>
+
+      <td>0</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>unit_sect</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>forename</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>initials</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>surname</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>addr1</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>addr2</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>addr3</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_code</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>telephone_w</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>telephone_h</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>fax</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>mobile</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>email</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>parent1</td>
+
+      <td>integer</td>
+
+      <td>0</td>
+
+      <td>id of primary parent/caregiver</td>
+
+    </tr>
+
+    <tr>
+
+      <td>parent1_forename</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>parent1_surname</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>parent2</td>
+
+      <td>integer</td>
+
+      <td>0</td>
+
+      <td>id of second parent</td>
+
+    </tr>
+
+    <tr>
+
+      <td>parent2_forename</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>parent2_surname</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>on_line_id</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>scout_name</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>school</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>gender</td>
+
+      <td>char</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>add_info</td>
+
+      <td>TEXT</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>years</td>
+
+      <td>integer</td>
+
+      <td>0</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>months</td>
+
+      <td>integer</td>
+
+      <td>0</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>age</td>
+
+      <td>real</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>date_of_birth</td>
+
+      <td>string</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>dob</td>
+
+      <td>date format</td>
+
+      <td>datetime.date(1990,1,1).today()</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>status</td>
+
+      <td>char</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>sect_cd</td>
+
+      <td>char</td>
+
+      <td></td>
+
+      <td>Section code identifier - unused</td>
+
+    </tr>
+
+    <tr>
+
+      <td>achievelist</td>
+
+      <td>list</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>achieve_wiplist</td>
+
+      <td>list</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>award_todolist</td>
+
+      <td>list</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>found</td>
+
+      <td>integer</td>
+
+      <td>0</td>
+
+      <td>1 if record is found</td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<h3>Methods</h3>
+
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="font-weight: bold;">Method name</td>
+
+
+      <td style="font-weight: bold;">Parameters</td>
+
+
+      <td style="font-weight: bold;">Description / comments</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<ul>
+
+
+</ul>
+
+
+<br>
+
+
+<br>
+
+<br>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>Scouts membership system (development)</title>
+
+<link rel="stylesheet" type="text/css" href="../scout.css">
+<script language="Javascript" type="text/javascript">
+  re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+  function validate_email(myform){
+    if (re.test(myform.email.value)){
+      return true
+    }
+    alert("Invalid email address")
+    myform.email.focus()
+    myform.email.select()
+    return false
+  } 
+
+  if (document.getElementById)
+    alert('Standard browser')
+  else
+    alert('Non-standard browser')
+
+</script>
+</head>
+
+<body>
+<TABLE BORDER="0" CELLPADDING="2" CELLSPACING="0" COLS="3" WIDTH="100%">
+<TR>
+<TD ROWSPAN="3" WIDTH="100"><img border="0" src="../scoutsnz1.gif"></TD>
+<TD ALIGN="CENTER" ROWSPAN="3" WIDTH="*"><H1>Scouts membership system (development)</H1>
+</TD>
+
+<TD ALIGN="CENTER" WIDTH="10%">&nbsp;</TD>
+</TR>
+<TR>
+<TD> </TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER" BGCOLOR="FFFF00"><A href="office.py?jw_action=login_form">Sign In</A>
+</TD>
+</TR>
+</TABLE>
+
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0">
+<TR>
+<TD><A href="scout.py?jw_action=home_page">Home</A>
+
+</TD>
+<TD><A href="scout.py?jw_action=natf_disp">Browse</A>
+</TD>
+</TR>
+</TABLE>
+
+<BR>
+<H2><CENTER>N0 sign on account could be found for the details you have provided.</CENTER>
+</H2>
+
+<CENTER><H3>You may leave a message to the system administrator below. Please note that this database is maintained on a part time basis and it may be a while before you receive a reply.</H3></CENTER>
+ 
+<FORM METHOD="POST" NAME="pwhint_p1" action="office.py" onsubmit="return validate_email(this)"><TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+
+<TD WIDTH="20%">Your name</TD>
+<TD><INPUT TYPE="TEXT" NAME="name" size="40" maxsize="80"></TD>
+</TR>
+<TR>
+<TD WIDTH="20%">Your email address</TD>
+<TD><INPUT TYPE="TEXT" NAME="email" size="40" maxsize="80"></TD>
+</TR>
+<TR>
+<TD WIDTH="20%">Your phone number</TD>
+<TD><INPUT TYPE="TEXT" NAME="phone" size="40" maxsize="80"></TD>
+</TR>
+<TR>
+<TD WIDTH="20%">Subject</TD>
+
+<TD><INPUT TYPE="TEXT" NAME="subject" size="40" maxsize="80"></TD>
+</TR>
+<TR>
+<TD COLSPAN="2"><TEXTAREA NAME="body" rows="10" cols="70"> </TEXTAREA></TD>
+</TR>
+<TR>
+<TD WIDTH="25%">&nbsp;</TD>
+<TD><INPUT TYPE="SUBMIT" VALUE="Submit request" NAME="pwreq"></TD>
+</TR>
+</TABLE>
+<INPUT TYPE="HIDDEN" NAME="jw_action" VALUE="pwhint_p2"></FORM>
+
+<address><hr> Copyright Jim West 2003-2004</address>
+
+</body>
+</html>

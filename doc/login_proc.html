@@ -1,0 +1,51 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module login_proc</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>login_proc</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/data1/dev/scout/py/login_proc.py">/data1/dev/scout/py/login_proc.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;is&nbsp;a&nbsp;stand&nbsp;alone&nbsp;module&nbsp;that&nbsp;contains&nbsp;only&nbsp;the&nbsp;function&nbsp;<a href="#-login_proc">login_proc</a>()</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#fffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="cgi.html">cgi</a><br>
+<a href="dbobj.html">dbobj</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="string.html">string</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="syslog.html">syslog</a><br>
+<a href="time.html">time</a><br>
+<a href="traceback.html">traceback</a><br>
+</td><td width="25%" valign=top><a href="webproc.html">webproc</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-login_proc"><strong>login_proc</strong></a>(form, db, param, conn)</dt><dd><tt>Processes&nbsp;the&nbsp;login&nbsp;form.<br>
+The&nbsp;module&nbsp;requires&nbsp;the&nbsp;username&nbsp;(li_name)&nbsp;and&nbsp;password&nbsp;(li_password)&nbsp;to&nbsp;be&nbsp;passed&nbsp;from&nbsp;the&nbsp;form.<br>
+Errors&nbsp;returned&nbsp;if:<br>
+&nbsp;&nbsp;li_name&nbsp;not&nbsp;present<br>
+&nbsp;&nbsp;user&nbsp;name&nbsp;not&nbsp;found&nbsp;in&nbsp;DB<br>
+&nbsp;&nbsp;password&nbsp;invalid<br>
+If&nbsp;the&nbsp;user&nbsp;has&nbsp;not&nbsp;agreed&nbsp;to&nbsp;the&nbsp;online&nbsp;agreement,&nbsp;it&nbsp;is&nbsp;presented&nbsp;for&nbsp;acceptance&nbsp;(olf_agree()&nbsp;in&nbsp;signinproc.py)<br>
+The&nbsp;connection&nbsp;record&nbsp;is&nbsp;updated<br>
+Control&nbsp;passed&nbsp;to&nbsp;the&nbsp;following&nbsp;procedures&nbsp;based&nbsp;on&nbsp;'next_proc'&nbsp;parameter:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achievef_present()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;awardf_disp()<br>
+&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;home_page()</tt></dd></dl>
+</td></tr></table>
+</body></html>

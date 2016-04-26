@@ -1,0 +1,504 @@
+\i /home/jim/scout/postgres/award.sql 
+select * from award;
+\i /home/jim/scout/postgres/award.sql 
+\i /home/jim/scout/postgres/award.sql 
+\i /home/jim/scout/postgres/award.sql 
+\i /home/jim/scout/postgres/award.sql 
+select * from award;
+select * from awardsub;
+\q
+select * from scout;
+select * from scout;
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+select * from award;
+\q
+\q
+select * from achieve;
+\q
+select * from achieve;
+delete from achieve where award_id = 4;
+select * from achieve;
+\q
+\i /home/jim/scout/postgres/award.sql 
+\c scout
+\i /home/jim/scout/postgres/award.sql 
+\q
+select * from history;
+select * from scout where scout_id = 74;
+select * from history;
+select * from history;
+exit
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+select * from award;
+\q
+selct award_id from award where leader != 1 and sect_cd = 'C';
+select award_id from award where leader != 1 and sect_cd = 'C';
+select award_id from award where sect_cd = 'C';
+select award_id from award where not (leader = 1)w and sect_cd = 'C';
+select award_id from award where not (leader = 1) and sect_cd = 'C';
+select award_id, leaderw from award where not (leader = 1)w and sect_cd = 'C';
+select award_id, leader from award where not (leader = 1)w and sect_cd = 'C';
+select award_id, leader from award where not (leader = 1) and sect_cd = 'C';
+update award set leader = 1;
+select award_id from award where leader != 1 and sect_cd = 'C';
+update award set leader = 0;
+select award_id from award where leader != 1 and sect_cd = 'C';
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award.sql 
+select * from award where award_id = 1;
+\q
+select * from award;
+select * from award where award_id = 9;
+select * from award where award_id = 9;
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+select * from awardsub;
+\q
+select * from scout;
+select * from connection;
+select * from connection;
+\d scout
+select * from scout;
+\q
+select * from awardsub;
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\d award_type
+\q
+\i /home/jim/scout/postgres/award.sql 
+vacuum;
+\q
+select * from award_type where sect_cd = 'C';
+\q
+select * from award where sect_cd = 'C';
+\q
+\i /home/jim/scout/postgres/award.sql 
+q
+\q
+\i /home/jim/scout/postgres/award.sql 
+select * from award;
+\q
+\q
+select 8 from awardsub;
+select * from awardsub;
+\q
+\i /home/jim/scout/postgres/award.sql 
+\q
+\i /home/jim/scout/postgres/award_type.sql 
+\i /home/jim/scout/postgres/award_type.sql 
+\c scout
+\i /home/jim/scout/postgres/award_type.sql 
+\q
+\c scout
+vacuum;
+\q
+\d award
+alter table award drop prereq_3;
+alter table award drop prereq_2;
+alter table award drop prereq_1;
+select sublevel_needed from award;
+alter table award drop sublevel_needed;
+\d award
+alter table award add prereq integer default 0;
+alter table award add prereq integer;
+alter table award add leader integer;
+alter table award add opt_needed integer;
+alter table award add status char(1);
+alter table award add yrs_valid integer;
+alter table award add mth_valid integer;
+update table award set prereq = 0;
+update award set prereq = 0;
+update award set leader = 0;
+update award set opt_needed = 0;
+update award set yrs_valid = 0;
+update award set mth_valid = 0;
+\c scoutdev
+select status from award;
+\c scout
+update award set status = 'C';
+\d awardsub
+\d achieve
+\d
+select * from awardsub;
+drop table awardsub;
+create table awardsub (
+  award_id integer references award on delete cascade,
+  sub_award_id integer,
+  name varchar(80),
+  descr text,
+  optional integer,
+  num_req integer default 1,
+  primary key (award_id, sub_award_id));
+grant select,update,insert,delete on awardsub to apache;
+\q
+\d award
+alter table award add award_type integer references award_type;
+\c scoutdev
+select award_type from award;
+\c scout
+select award_type from award;
+select award_type from award;
+select * from award where award_type != 3;
+select * from award where award_type = 3;
+select * from award where award_type;
+select * from award ;
+select * from award ;
+select award_type from award;
+select award_type, prereq from award;
+select name, award_type, prereq from award;
+grant select,update,insert,delete on awd_seq to apache;
+select name, award_type, prereq from award;
+select award_id, name, award_type, prereq from award;
+select award_id, name, award_type, prereq from award;
+select award_id, name, award_type, prereq from award order by award_id;
+select * from awd_seq;
+select * from awd_seq;
+drop sequence awd_seq;
+create sequence awd_seq start 36;
+grant select,update,insert,delete on awd_seq to apache;
+select * from award;
+select * from award;
+\c scoutdev
+select * from award;
+\q
+select * from award order by award_id;
+select * from award order by award_id;
+\i /home/jim/scout/postgres/award.sql
+select * from award order by award_id;
+select * from award order by award_id;
+select * from award order by award_id;
+\i /home/jim/scout/postgres/award.sql
+select * from award order by award_id;
+select * from award order by award_id;
+\i /home/jim/scout/postgres/award.sql
+select * from award order by award_id;
+select descr, name from award where descr != '';
+select descr, name from award;
+\i /home/jim/scout/postgres/award.sql
+\c scout
+\d achieve
+alter table achieve add awd_presented integer;
+alter table achieve add ldr_notify integer;
+select * from achieve;
+select award_id, name from award;
+select * from achieve where award_id = 4;
+select * from achieve;
+select * from achieve where award_id = 6;
+update achieve set awd_presented = 1;
+update achieve set ldr_notify = 1;
+\c scoutdev
+\q
+select * from achieve;
+update achieve set status = 'W' where award_id = 16;
+delete from achieve where award_id = 16;
+select * from achieve;
+delete from achieve where award_id = 16;
+vacuum;
+select * from achieve;
+delete from achieve where award_id = 16;
+select * from achieve;
+select * from awardsub;
+\d
+select * from achievesub;
+select * from achievesub;
+select * from achieve;
+select * from achievesub;
+select * from awardsub;
+\d achievesub
+select * from awardsub;
+select * from achievesub;
+select * from achievesub;
+select * from achieve;
+select * from award;
+select * from achieve;
+select * from achievesub;
+select * from awardsub;
+select * from achievesub;
+select * from achieve;
+select * from achievesub;
+select * from achievesub;
+select * from achieve;
+select * from achieve;
+select * from achieve;
+\q
+\d
+\d section
+select * from section;
+update section set name = 'Keas' where sect_cd = 'K';
+\c scout
+update section set name = 'Keas' where sect_cd = 'K';
+select * from section;
+\q
+\d
+\q
+\i ~/surf/postgres/quest.sql 
+\i /home/jim/surf/postgres/quest.sql 
+\q
+\i /home/jim/surf/postgres/quest.sql 
+\q
+\i /home/jim/surf/postgres/contact.sql 
+\q
+\d
+\d public
+\?
+\l
+\q
+select * from message;
+select * from message;
+select * from message;
+select * from message;
+select * from message;
+select msg_id from message;
+select msg_id from message;
+\q
+\i /home/jim/surf/postgres/contact.sql 
+\q
+\i /home/jim/surf/postgres/youth.sql 
+\d
+\c surf
+\d
+\q
+\i /home/jim/surf/postgres/club.sql 
+select * from club;
+\q
+select * from club;
+\q
+\d
+select * from youth;
+\q
+\i /home/jim/surf/postgres/youth.sql 
+\q
+select * from youth;
+\i /home/jim/surf/postgres/youth.sql 
+\i /home/jim/surf/postgres/youth.sql 
+select * from youth;
+select * from youth;
+select * from youth;
+\i /home/jim/surf/postgres/youth.sql 
+select * from youth;
+\i /home/jim/surf/postgres/youth.sql 
+select * from youth;
+\i /home/jim/surf/postgres/youth.sql 
+select * from youth;
+select * from youth;
+select * from youth;
+\q
+\i /home/jim/surf/postgres/adult.sql 
+\q
+\i /home/jim/surf/postgres/adult.sql 
+\q
+\i /home/jim/surf/postgres/adult.sql 
+select * from adult;
+select * from adult;
+select * from adult;
+\i /home/jim/surf/postgres/adult.sql 
+\i /home/jim/surf/postgres/adult.sql 
+select * from adult;
+select * from adult;
+select * from adult;
+\i /home/jim/surf/postgres/adult.sql 
+select * from adult;
+select * from adult;
+select * from adult;
+\q
+\i /home/jim/surf/postgres/club.sql 
+\i /home/jim/surf/postgres/contact.sql 
+\q
+select * from club;
+select * from contact;
+\q
+select * from youth;
+select * from adult;
+\q
+\i /home/jim/surf/postgres/adult.sql 
+\i /home/jim/surf/postgres/youth.sql 
+select * from youth;
+\q
+\i /home/jim/surf/postgres/contact.sql 
+\d contact
+\q
+select * from youth;
+\i /home/jim/surf/postgres/contact.sql 
+\q
+select * from history;
+select * from scout where scout_id = 74;
+select * from history;
+\q
+\i /home/jim/surf/postgres/adult.sql 
+\i /home/jim/surf/postgres/youth.sql 
+\c surf
+select * from adult;
+select * from youth;
+\i /home/jim/surf/postgres/youth.sql 
+\i /home/jim/surf/postgres/adult.sql 
+\q
+alter table club add email_msg varchar(120);
+\c surf
+alter table club add email_msg varchar(120);
+\q
+select * from contact;
+\q
+select * from contact;
+\q
+select * from adult;
+select * from adult;
+select * from adult;
+select * from youth;
+\q
+select * from youth;
+select * from adult;
+\q
+select * from youth ;
+select * from adult ;
+\q
+\d adult
+select name, inv_slg_info, inv_slg_do from adult;
+\q
+select * from adult;
+\q
+\i /home/jim/surf/postgres/connection.sql 
+\q
+select * from connection;
+\i /home/jim/surf/postgres/connection.sql 
+\c surf
+select * from connection;
+\i /home/jim/surf/postgres/connection.sql 
+\q
+\d contact
+alter table add no_resp integer;
+alter table contact add no_resp integer;
+\c surf
+alter table contact add no_resp integer;
+\c surfdev
+update contact set no_rest = 0;
+update contact set no_resp = 0;
+select * from contact;
+\c surf
+update contact set no_resp = 0;
+\c surfdev
+\q
+select * from contact;
+select * from contact;
+\q
+select * from contact;
+\q
+select * from contact 
+;
+select * from club;
+\q
+\i /home/jim/surf/postgres/connection.sql 
+select * from connection;
+select * from connection;
+\q
+\d award
+alter table award add collective integer;
+\c scout
+alter table award add collective integer;
+\c scoutdev
+update award set collective = 0;
+\c scout
+update award set collective = 0;
+\c scoutdev
+update award set collective = 1 where award_id = 40;
+\q
+vacuum;
+\q
+\d
+\i /home/jim/scout/postgres/achievesub.sql 
+select * from achievesub;
+\q
+\q
+\d
+\d unit
+\q
+select * from role;
+\q
+\d unit
+alter table unit add award_remind date;
+\d unit
+\c scout
+alter table unit add award_remind date;
+\c scoutdev
+update unit set award_remind = '  /  /  ';
+update unit set award_remind = '  -  -  ';
+\q
+\d award
+\c scoutdev
+\d award
+alter table drop constraint $1;
+alter table award drop constraint $1;
+alter table award drop constraint award_type;
+\d award
+alter table award drop constraint $1 FOREIGN KEY (award_type);
+alter table award drop constraint FOREIGN KEY (award_type);
+\d
+\?
+\?
+\dt+
+\d+ award
+alter table award drop constraint (award_type);
+alter table award drop constraint award_type;
+alter table award drop constraint award_type(award_type);
+alter table award add sect_cd_new char;
+alter table award add award_type_new integer;
+update table award set sect_cd_new = sect_cd;
+update award set sect_cd_new = sect_cd;
+update award set award_type_new = award_type;
+alter table drop award_type;
+alter table award drop award_type;
+\d award
+alter table award add award_type references award_type;
+alter table award add award_type integer references award_type;
+update award set award_type = award_type_new;
+alter table award drop award_type_new;
+\d award
+alter table award add constraint award_type foreign key award_type references award_type(award_type);
+alter table award add constraint award_type foreign key (award_type) references award_type(award_type);
+\d award
+alter table award drop constraint award_type;
+alter table award add constraint award_type foreign key (award_type) references award_type(award_type) MATCH FULL;
+\d award
+\q
+\c scoutdev
+\d award
+alter table award drop constraint award_type;
+alter table award add constraint award_type foreign key (award_type) references award_type(award_type);
+\d award
+\c scout
+alter table award add constraint award_type foreign key (award_type) references award_type(award_type);
+\d award
+alter table award add constraint award_type foreign key (award_type) references award_type(award_type);
+\d award
+alter table award add sect_cd_new char;
+update table award set sect_cd_new = sect_cd;
+update award set sect_cd_new = sect_cd;
+alter table award drop sect_cd;
+alter table award add sect_cd char;
+update award set sect_cd = sect_cd_new;
+alter table award drop sect_cd_new;
+\d award
+\q
+alter scout add email_bounce int;
+alter table scout add email_bounce int;
+\d scout
+\s scoutdb

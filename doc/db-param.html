@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  
+
+
+  
+  <title>DB Parameter record</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="file:///Y:/scout/doc/scout-doc.css" type="text/css">
+</head>
+
+
+<body style="background-color: rgb(255, 255, 255);">
+
+
+<h2>class paramrec</h2>
+
+
+<blockquote>
+  
+  <p>This class reads a text based parameter file and populates the properties below with the appropriate values</p>
+
+
+</blockquote>
+
+
+<h3>Parameters </h3>
+
+
+None
+<ul>
+
+
+</ul>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+</ul>
+
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="font-weight: bold;">Property name</td>
+
+
+      <td style="font-weight: bold;">Data type</td>
+
+
+      <td style="font-weight: bold;">Default</td>
+
+
+      <td style="font-weight: bold;">Description &amp;
+comments</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>dbname</td>
+
+
+      <td>string</td>
+
+
+      <td>scout</td>
+
+
+      <td>Name of the database to connect to</td>
+
+
+    </tr>
+
+
+
+
+    <tr>
+
+
+      <td>title</td>
+
+
+      <td>string</td>
+
+
+      <td>Scout membership systems</td>
+
+
+      <td>Title to be displayed at the top of each screen</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>css_file</td>
+
+
+      <td>string</td>
+
+
+      <td></td>
+
+
+      <td>Cascading style sheet to use for web pages</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>logo</td>
+
+
+      <td>string</td>
+
+
+      <td></td>
+
+
+      <td>Logo to display in top left part of the screen</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>age_variance</td>
+
+
+      <td>string</td>
+
+
+      <td>0.5</td>
+
+
+      <td>The age variance is the allowable difference in years between
+that is allowed between the start age of a section and the actual age
+of the child.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>baseurl</td>
+
+
+      <td>string</td>
+
+
+      <td></td>
+
+
+      <td>The base URL of the web site (not necessary)</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>pythondir</td>
+
+
+      <td>string</td>
+
+
+      <td>/py</td>
+
+
+      <td>The directory where python scripts are stored</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>extract_dir</td>
+
+
+      <td>string</td>
+
+
+      <td>extract</td>
+
+
+      <td>The directory where extract files are created. The web server user (apache) need to have write access here.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>template_dir</td>
+
+
+      <td>string</td>
+
+
+      <td>template</td>
+
+
+      <td>Directory where template files are stored.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>email_extract_msg</td>
+
+
+      <td>string</td>
+
+
+      <td>email-extract-msg.txt</td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+      <td>email_account_create</td>
+
+
+      <td>string</td>
+
+
+      <td>email_account_create.html</td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>email_pw_hint</td>
+
+
+      <td>string</td>
+
+
+      <td>email_pw_hint.html</td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>email_header</td>
+
+
+      <td>string</td>
+
+
+      <td>email_header.html</td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>email_footer</td>
+
+
+      <td>string</td>
+
+
+      <td>email_footer.html</td>
+
+
+      <td></td>
+
+
+    </tr>
+
+
+    <tr>
+
+      <td>online_agreement</td>
+
+      <td>string</td>
+
+      <td>online_agreement.html</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+
+      <td>smtpserver</td>
+
+
+      <td>string</td>
+
+
+      <td>localhost</td>
+
+
+      <td>FQDN of outgoing SMTP server</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>fromaddr</td>
+
+
+      <td>string</td>
+
+
+      <td></td>
+
+
+      <td>Email address where system generated emails will be sent from.</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>ot_cellpad</td>
+
+
+      <td>string</td>
+
+
+      <td>3</td>
+
+
+      <td>Outer table default cell padding</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>ot_cellspc</td>
+
+
+      <td>string</td>
+
+
+      <td>0</td>
+
+
+      <td>Outer table default cell spacing</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>ot_brdr</td>
+
+
+      <td>string</td>
+
+
+      <td>1</td>
+
+
+      <td>Outer table default border</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>it_cellpad</td>
+
+
+      <td>string</td>
+
+
+      <td>0</td>
+
+
+      <td>Inner table default cell padding</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>it_cellspc</td>
+
+
+      <td>string</td>
+
+
+      <td>0</td>
+
+
+      <td>Inner table default cell spacing</td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>
+it_brdr
+
+
+      </td>
+
+
+      <td>string</td>
+
+
+      <td>0</td>
+
+
+      <td>Inner table default border</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<h3>Methods</h3>
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+
+  <tbody>
+
+
+    <tr>
+
+
+      <td style="font-weight: bold;">Method name</td>
+
+
+      <td style="font-weight: bold;">Parameters</td>
+
+
+      <td style="font-weight: bold;">Description / comments</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<ul>
+
+
+</ul>
+
+
+<br>
+
+
+</body>
+</html>

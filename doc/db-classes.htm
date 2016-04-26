@@ -1,0 +1,2176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+
+  
+  
+  <title>Database classes</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link rel="stylesheet" href="file:///Y:/scout/doc/scout-doc.css" type="text/css">
+</head>
+
+
+<body bgcolor="#ffffff">
+
+
+<h1><font face="Arial, Helvetica, sans-serif">Database classes</font></h1>
+
+
+<table border="1" cellpadding="0" cellspacing="2" width="71%">
+
+
+  <tbody>
+
+    <tr>
+
+ 
+    <td width="25%"><a href="#paramrec">paramrec</a></td>
+
+
+    <td width="25%">
+      
+      <table border="1" cellpadding="0" cellspacing="2" width="71%">
+
+        <tbody>
+
+          <tr>
+
+            <td width="25%"><a href="db-classes.htm#ourec">ourec</a></td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+
+      </td>
+
+
+    <td width="23%"><a href="#arearec">arearec</a></td>
+
+
+    <td width="27%"><a href="#districtrec">districtrec</a></td>
+
+
+  </tr>
+
+
+  <tr>
+
+ 
+    <td width="25%"><a href="#grouprec">grouprec</a></td>
+
+
+    <td width="25%"><a href="#unitrec">unitrec</a></td>
+
+
+    <td width="23%"><a href="#scoutrec">scoutrec</a></td>
+
+
+    <td width="27%"><a href="#adultrec">adultrec</a></td>
+
+
+  </tr>
+
+
+  <tr>
+
+ 
+    <td height="25" width="25%"><a href="#rolerec">rolerec</a></td>
+
+
+    <td height="25" width="25%"><a href="#person_list">person_list</a></td>
+
+
+    <td height="25" width="23%"><a href="#sectionrec">sectionrec</a></td>
+
+
+    <td height="25" width="27%"><a href="#section_list">section_list</a></td>
+
+
+  </tr>
+
+
+  <tr>
+
+ 
+    <td width="25%"><a href="#connectrec">connectrec</a></td>
+
+
+    <td width="25%"><a href="#histrec">histrec</a></td>
+
+
+    <td width="23%"><a href="#awardrec">awardrec</a></td>
+
+
+    <td width="27%"><a href="#award_sublevel">award_sublevel</a></td>
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td width="25%"><a href="#achieverec">achieverec</a></td>
+
+
+    <td width="25%">
+      
+      <table border="1" cellpadding="0" cellspacing="2" width="71%">
+
+        <tbody>
+
+          <tr>
+
+            <td width="25%"><a href="db-classes.htm#nationalrec">nationalrec</a></td>
+
+          </tr>
+
+        
+        </tbody>
+      
+      </table>
+
+      </td>
+
+
+    <td width="23%"><a href="#messagerec">messagerec</a></td>
+
+
+    <td width="27%">&nbsp;</td>
+
+
+  </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+<hr>
+<h2><a name="paramrec"></a>class paramrec</h2>
+
+
+<blockquote>
+  
+  
+  <p>Stores information loaded from the 'scout.conf' configuration file for internal 
+    use.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>dbname</li>
+
+
+  <li>title</li>
+
+
+  <li>css_file</li>
+
+
+  <li>logo</li>
+
+
+  <li>age_variance</li>
+
+
+  <li>baseurl</li>
+
+
+  <li>pythondir</li>
+
+
+  <li>extract_dir</li>
+
+
+  <li>template_dir</li>
+
+
+  <li>email_extract_msg</li>
+
+
+  <li>email_account_create</li>
+
+
+  <li>email_pw_hint</li>
+
+
+  <li>email_header</li>
+
+
+  <li>email_footer</li>
+
+
+  <li>smtpserver</li>
+
+
+  <li>fromaddr</li>
+
+
+  <li>ot_cellpad</li>
+
+
+  <li>ot_cellspc</li>
+
+
+  <li>ot_brdr</li>
+
+
+  <li>it_cellpad</li>
+
+
+  <li>it_cellspc</li>
+
+
+  <li>it_brdr</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>None</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="ourec"></a>class ourec</h2>
+
+
+<blockquote>
+  
+  
+  <p>This class provide access to attributes of the organisational unit record 
+    of the scout DB.</p>
+
+
+</blockquote>
+
+
+<h3>Parameters </h3>
+
+
+<ul>
+
+  <li>database</li>
+
+  <li>ouIid. Unique identifier for the org unit.</li>
+
+</ul>
+
+<h3>Properties </h3>
+
+
+<ul>
+
+</ul>
+
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-weight: bold;">Property name</td>
+
+      <td style="font-weight: bold;">Data type</td>
+
+      <td style="font-weight: bold;">Default</td>
+
+      <td style="font-weight: bold;">Description &amp; comments</td>
+
+    </tr>
+
+
+    <tr>
+
+      <td>database</td>
+
+      <td>database object</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>ou_id</td>
+
+      <td>integer</td>
+
+      <td></td>
+
+      <td>Unique identifier</td>
+
+    </tr>
+
+    <tr>
+
+      <td>name</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>ou_owner</td>
+
+      <td>int</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>ou_struct</td>
+
+      <td>int</td>
+
+      <td></td>
+
+      <td>References table ou_struct</td>
+
+    </tr>
+
+    <tr>
+
+      <td>struct_name</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td>from ou_struct</td>
+
+    </tr>
+
+    <tr>
+
+      <td>struct_parent</td>
+
+      <td>int</td>
+
+      <td></td>
+
+      <td>the ou_struct id of the parent of this level of the structure.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>curr_memb</td>
+
+      <td>int</td>
+
+      <td>0</td>
+
+      <td>Number of people who are members or management members.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>curr_child</td>
+
+      <td>int</td>
+
+      <td>0</td>
+
+      <td>Number of OU's that are children of this OU.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_addr1</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td>Physical address</td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_addr2</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_addr3</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>p_code</td>
+
+      <td>varchar(10)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_addr1</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td>Mailing address</td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_addr2</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_addr3</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>m_code</td>
+
+      <td>varchar(10)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>phone</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>fax</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>sect_cd</td>
+
+      <td>char(1)</td>
+
+      <td></td>
+
+      <td>Will be discontinued. scout section details to be held in ou_struct rec.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>meet_time</td>
+
+      <td>varchar(60)</td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td>start_age</td>
+
+      <td>real</td>
+
+      <td></td>
+
+      <td>Specific to unit level, age at which children can join the unit.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>end_age</td>
+
+      <td>real</td>
+
+      <td></td>
+
+      <td>Specific to unit level, age at which children should leave the unit.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>award_remind</td>
+
+      <td>date</td>
+
+      <td></td>
+
+      <td>Date last award reminders were checked and/or sent out</td>
+
+    </tr>
+
+    <tr>
+
+      <td>found</td>
+
+      <td>int</td>
+
+      <td>0</td>
+
+      <td>Flag indicating if the record was found.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>childlist</td>
+
+      <td>list</td>
+
+      <td>undefined</td>
+
+      <td>Defined when method child_list is called. Contains a list of &nbsp;OU objects that are children of the current OU.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>heir_child_names</td>
+
+      <td>list</td>
+
+      <td>undefined</td>
+
+      <td>Defined when method child_list is called. Contains tuples
+containing ou_struct id's and names of possible child OU types from thr
+ou_struct table.</td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+<h3>Methods</h3>
+
+
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+
+  <tbody>
+
+    <tr>
+
+      <td style="font-weight: bold;">Method name</td>
+
+      <td style="font-weight: bold;">Parameters</td>
+
+      <td style="font-weight: bold;">Description / comments</td>
+
+    </tr>
+
+    <tr>
+
+      <td>update</td>
+
+      <td>none</td>
+
+      <td>Updates the OU record with vanues held in object properties.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>add</td>
+
+      <td>none</td>
+
+      <td>Creates an new OU record</td>
+
+    </tr>
+
+    <tr>
+
+      <td>delete</td>
+
+      <td>none</td>
+
+      <td>Deletes the OU after checking that there are no OU or people dependancies on it.</td>
+
+    </tr>
+
+    <tr>
+
+      <td>child_list</td>
+
+      <td>none</td>
+
+      <td>Populates the property lists <span style="font-weight: bold;">childlist</span> and <span style="font-weight: bold;">heir_child_names</span> and returns childlist</td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+<ul>
+
+</ul>
+
+
+<hr>
+<h2><a name="arearec"></a>class arearec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>This class provides access to area database details.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>name</li>
+
+
+  <li>area_id</li>
+
+
+  <li>national_id - allways 1</li>
+
+
+  <li>curr_memb - number of districts in the area</li>
+
+
+  <li>found - 1 if found, 0 if not found</li>
+
+
+  <li>result</li>
+
+
+  <li>districtlist - initialised by dist_list() method</li>
+
+
+  <li>rolelist - returns list of adult roles at the national level</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, area_id) - initiates the object. db is database object, area_id 
+    is the area identifier to be used</li>
+
+
+  <li>update() - update details of the area record</li>
+
+
+  <li>add() - adds area record</li>
+
+
+  <li>delete() - deletes the area record</li>
+
+
+  <li>district_list() - returns list of districts defined for the area</li>
+
+
+  <li>role_list() - returns list of adult roles at this area</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="districtrec"></a>class districtrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>This class provides access to district database details.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>dbname</li>
+
+
+  <li>name</li>
+
+
+  <li>dist_id</li>
+
+
+  <li>area_id - id of 'owner' area</li>
+
+
+  <li>curr_memb - number of groups in the district</li>
+
+
+  <li>found - 1 if found, 0 if not found</li>
+
+
+  <li>result</li>
+
+
+  <li>grouplist - initialised by group_list() method</li>
+
+
+  <li>rolelist - returns list of adult roles at this district</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, dist_id) - initiates the object. db is database object, dist_id 
+    is the district identifier to be used</li>
+
+
+  <li>update() - update details of the district record</li>
+
+
+  <li>add() - adds district record</li>
+
+
+  <li>delete() - deletes the district record</li>
+
+
+  <li>group_list() - returns list of groups defined for the area</li>
+
+
+  <li>role_list() - returns list of adult roles at this district</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="grouprec"></a>class grouprec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>This class provides access to group database details.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>dbname</li>
+
+
+  <li>name</li>
+
+
+  <li>group_id</li>
+
+
+  <li>dist_id - id of 'owner' district</li>
+
+
+  <li>addr1</li>
+
+
+  <li>addr2</li>
+
+
+  <li>addr3</li>
+
+
+  <li>p_code</li>
+
+
+  <li>telephone</li>
+
+
+  <li>curr_memb - number of groups in the district</li>
+
+
+  <li>found - 1 if found, 0 if not found</li>
+
+
+  <li>result</li>
+
+
+  <li>unitlist - initialised by unit_list() method</li>
+
+
+  <li>rolelist - returns list of adult roles at this group</li>
+
+
+  <li>parentlist - returns list of parents with children at units in this group</li>
+
+
+  <li>scoutlist - retirns list of all scouts (children) in the group</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, group_id) - initiates the object. db is database object, group_id 
+    is the group identifier to be used</li>
+
+
+  <li>update() - update details of the group record</li>
+
+
+  <li>add() - adds group record</li>
+
+
+  <li>delete() - deletes the group record</li>
+
+
+  <li>unit_list() - returns list of units defined for the group</li>
+
+
+  <li>role_list() - returns list of adult roles at this group</li>
+
+
+  <li>parent_list() - returns list of parents in the group</li>
+
+
+  <li>all_scout_list(status = 'C') - returns all scouts in the group (status feature 
+    no yet written)</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="unitrec"></a>class unitrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>This class provides access to unit database details.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>unit_id</li>
+
+
+  <li>name</li>
+
+
+  <li>sect_cd - What section the unit is in, e.g. Kea's, Cubs etc.</li>
+
+
+  <li>sect_name - Name of the section</li>
+
+
+  <li>group_id - 'owner' group id.</li>
+
+
+  <li>meet_time</li>
+
+
+  <li>next_sect - code of next section up.</li>
+
+
+  <li>next_sect_name</li>
+
+
+  <li>start_age</li>
+
+
+  <li>end_age</li>
+
+
+  <li>curr_memb</li>
+
+
+  <li>found</li>
+
+
+  <li>scoutlist - initialised in scout_list()</li>
+
+
+  <li>rolelist - initialised in role_list()</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, unit_id) - initiates the object. db is database object, unit_id_id 
+    is the unit identifier to be used</li>
+
+
+  <li>update() - update details of the unit record</li>
+
+
+  <li>add() - adds init record</li>
+
+
+  <li>delete() - deletes the unit record</li>
+
+
+  <li>scout_list() - returns list of scouts in the unit</li>
+
+
+  <li>role_list() - returns list of adult roles at this unit</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="scoutrec"></a>class scoutrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to scout details and methods. While scouts are in the same 
+    database as adults, this is targetted as scouts.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>scout_id</li>
+
+
+  <li>unit_id</li>
+
+
+  <li>unit_sect</li>
+
+
+  <li>forename</li>
+
+
+  <li>initials</li>
+
+
+  <li>surname</li>
+
+
+  <li><font color="#0000ff">addr1</font></li>
+
+
+  <li><font color="#0000ff">addr2</font></li>
+
+
+  <li><font color="#0000ff">addr3</font></li>
+
+
+  <li><font color="#0000ff">p_code</font></li>
+
+
+  <li><font color="#0000ff">telephone_w</font></li>
+
+
+  <li><font color="#0000ff">telephone_h</font></li>
+
+
+  <li><font color="#0000ff">fax</font></li>
+
+
+  <li>mobile</li>
+
+
+  <li>email</li>
+
+
+  <li>parent1 - id of primary parent/caregiver</li>
+
+
+  <li>parent1_forename</li>
+
+
+  <li>parent1_surname</li>
+
+
+  <li>parent2 - id of second parent</li>
+
+
+  <li>parent2_forename</li>
+
+
+  <li>parent2_surname</li>
+
+
+  <li><font color="#000000">on_line_id</font></li>
+
+
+  <li><font color="#0000ff">scout_name</font></li>
+
+
+  <li>school</li>
+
+
+  <li>gender</li>
+
+
+  <li>add_info (TEXT)</li>
+
+
+  <li>years</li>
+
+
+  <li>months</li>
+
+
+  <li>age</li>
+
+
+  <li>date_of_birth (C)</li>
+
+
+  <li>dob (date format)</li>
+
+
+  <li>status</li>
+
+
+  <li>found</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, scout_id) - initiates the object. db is database object, scout_id_id 
+    is the scout identifier to be used</li>
+
+
+  <li>update() - update details of the scout record</li>
+
+
+  <li>add() - adds new scout record</li>
+
+
+  <li>delete() - deletes the scout record</li>
+
+
+  <li>find_onlin_id(on_line_id) - returns scout ID if online ID exists in database</li>
+
+
+  <li>ch_status(new_status) - changes status of current scout</li>
+
+
+  <li>set_unit(new_unit) - changes unit of current scout</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="adultrec"></a>class adultrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to adult details and methods. While scouts are in the same 
+    database as adults, this is targetted as adults, leaders parents etc.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>scout_id</li>
+
+
+  <li>unit_id</li>
+
+
+  <li>forename</li>
+
+
+  <li>initials</li>
+
+
+  <li>surname</li>
+
+
+  <li><font color="#000000">addr1</font></li>
+
+
+  <li><font color="#000000">addr2</font></li>
+
+
+  <li><font color="#000000">addr3</font></li>
+
+
+  <li><font color="#000000">p_code</font></li>
+
+
+  <li><font color="#000000">telephone_w</font></li>
+
+
+  <li><font color="#000000">telephone_h</font></li>
+
+
+  <li><font color="#000000">fax</font></li>
+
+
+  <li>mobile</li>
+
+
+  <li>email</li>
+
+
+  <li><font color="#000000">on_line_id</font></li>
+
+
+  <li><font color="#000000">passwd</font></li>
+
+
+  <li><font color="#000000">oldpasswd</font></li>
+
+
+  <li><font color="#000000">pw_hint</font></li>
+
+
+  <li><font color="#000000">online_agree_dt</font></li>
+
+
+  <li>scout_name</li>
+
+
+  <li>gender</li>
+
+
+  <li>add_info (TEXT)</li>
+
+
+  <li>partner_id</li>
+
+
+  <li>partner_forename</li>
+
+
+  <li>partner_surname</li>
+
+
+  <li>date_of_birth (C)</li>
+
+
+  <li>home_level</li>
+
+
+  <li>home_id</li>
+
+
+  <li>superuser</li>
+
+
+  <li>found</li>
+
+
+  <li>kidslist - initialised by kids_list()</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, scout_id) - initiates the object. db is database object, scout_id_id 
+    is the scout identifier to be used</li>
+
+
+  <li>update() - update details of the adult record</li>
+
+
+  <li>add() - adds new scout record</li>
+
+
+  <li>find_on_line_id(on_line_id) - returns scout ID if online ID exists in database</li>
+
+
+  <li>find_email(email) - returns scout ID if email address exists in database</li>
+
+
+  <li>kids_list() - returns list of children associated with the adult</li>
+
+
+  <li>check_pw(password) - checks if password is correct, 1 = yes, anything else 
+    is no</li>
+
+
+  <li>update_pw(passwd, oldpasswd, superuser). Updates the password for an adult. 
+    if the person performing the reset is a superuser then the old password is 
+    not checked.</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="rolerec"></a>class rolerec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to role records. Role records provide info about what roles 
+    are performed by adults at various levels of the scouting heirarcy.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>role_id</li>
+
+
+  <li>level_ref - Level of heirarcy. Allowed values are 'N', 'A', 'D', 'G', 'U'</li>
+
+
+  <li>level_id - The id of the heirarcy record at the level, e.g. at level_ref 
+    'G' it would be a group ID.</li>
+
+
+  <li>scout_id</li>
+
+
+  <li>security</li>
+
+
+  <li>title</li>
+
+
+  <li>last_update</li>
+
+
+  <li>dt_appt</li>
+
+
+  <li>role_ref</li>
+
+
+  <li>forename</li>
+
+
+  <li>initials</li>
+
+
+  <li>surname</li>
+
+
+  <li>found</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, role_id) - initiates the object. db is database object, role_id_id 
+    is the role identifier to be used</li>
+
+
+  <li>find_role(level_ref, level_id, scout_id) - Finds what role, if any, exists 
+    for that scout_id (adult) and that level and the identifier for the heirarchy 
+    record at that level. Sets values to that level and sets found = 1, otherwise 
+    found = 0</li>
+
+
+  <li>update() - update details of the role record</li>
+
+
+  <li>add() - adds new role record</li>
+
+
+  <li>delete() - Deletes role record</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="person_list"></a>class person_list</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides a dictionary of personal details for people with similar surnames.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>list - dictionary result of search containing scout_id,surname, forename 
+    &amp; initials </li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, search_str, type) - populates list property. search_str is 
+    surname search string, type relates to status, primarily use 'A' for adult</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="sectionrec"></a>class sectionrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to section details.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>sect_cd</li>
+
+
+  <li>name</li>
+
+
+  <li>next_sect</li>
+
+
+  <li>start_age</li>
+
+
+  <li>end_age</li>
+
+
+  <li>collective</li>
+
+
+  <li>found - 1 if found, otherwise 0</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, cSect_cd) - Populates the section details as defined above.</li>
+
+
+</ul>
+
+
+<p>&nbsp;</p>
+
+
+<hr>
+<h2><a name="section_list"></a>class section_list</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides list of available connection records.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>sectionlist</li>
+
+
+  <li>cStr</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db) - Populates the sectionlist defined above.</li>
+
+
+</ul>
+
+
+<p>&nbsp;</p>
+
+
+<hr>
+<h2><a name="connectrec"></a>class connectrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>This class is used to define connection object. These objects provide data 
+    about the currently connected user.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>found - If connection record has been found</li>
+
+
+  <li>result - Text output of DB commands</li>
+
+
+  <li>valid</li>
+
+
+  <li>new_conn - 1 if this is a new connection (no cookie or connection record 
+    not found)</li>
+
+
+  <li>ref_id - The cookie identifier</li>
+
+
+  <li>auth_key - The cookie value - together with the ref ID uniquely identifies 
+    the connection for the connection database.</li>
+
+
+  <li>scout_id - The scout ID if user is logged in</li>
+
+
+  <li>last_access</li>
+
+
+  <li>sign_in - 1 if connection is signed in (has valid scout_id)</li>
+
+
+  <li>last_level - Last level access by the connection ('N', 'A', 'D', 'G', 'U')</li>
+
+
+  <li>last_level_id - Last heirarcy record ID accessed</li>
+
+
+  <li>home_level - Home level (if logged in)</li>
+
+
+  <li>home_id - Home heirarcy ID (if logged in)</li>
+
+
+  <li>superuser - 1 if user is a superuser, otherwise 0</li>
+
+
+  <li>online_agree - 1 if online agreement agreed to</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db). Initiates the object. Extracts the cookie and checks for the 
+    connection in the database. If appropriate gets the scout details if logged 
+    in. If no connection exists a new connection is created and values for the 
+    cookie generated.</li>
+
+
+  <li>logout() Remove scout ID from connection record - this logs the user out.</li>
+
+
+  <li>update() - Updates connection record with last accessed time, scout_id, 
+    last level and last_level_id.</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="awardrec"></a>class awardrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to award records. This is where badges are stored.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>found</li>
+
+
+  <li>award_id</li>
+
+
+  <li>ou_level ('U'nit, 'G'roup etc)</li>
+
+
+  <li>sect_cd (Which sections is this applicable to)</li>
+
+
+  <li>award_type - refers to award_type table</li>
+
+
+  <li>name</li>
+
+
+  <li>descr</li>
+
+
+  <li>sublevel - array of award_sublevel instances</li>
+
+
+  <li>opt_needed - number of optional sublevels required</li>
+
+
+  <li>prereq - id of awards needed before this one can be obtained.</li>
+
+
+  <li>leader (int) 1 if award is for leaders, otherwise 0</li>
+
+
+  <li>status</li>
+
+
+  <li>current - 1 if the status is such that the award is current</li>
+
+
+  <li>yrs_valid</li>
+
+
+  <li>mth_valid</li>
+
+
+  <li>expires - 1 if the award can expire, otherwise 0</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, hist_id) - Initialises object.</li>
+
+
+  <li>update()</li>
+
+
+  <li>add()</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="award_sublevel"></a>class award_sublevel</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to sub levels of award records.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>found</li>
+
+
+  <li>scout_id</li>
+
+
+  <li>award_id</li>
+
+
+  <li>sub_award_id</li>
+
+
+  <li>name</li>
+
+
+  <li>descr</li>
+
+
+  <li>optional</li>
+
+
+  <li>num_req</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, in_scout_id, in_awd_id) - Initialises object.</li>
+
+
+  <li>add() - Adds new achievement record</li>
+
+
+  <li>delete() - removes achievement record</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="achieverec"></a>class achieverec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to achievement records. This is where badges are awarded.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>found</li>
+
+
+  <li>scout_id</li>
+
+
+  <li>award_id</li>
+
+
+  <li>dt_obtained</li>
+
+
+  <li>name - taken from award rec</li>
+
+
+  <li>descr - taken from award rec</li>
+
+
+  <li>comments</li>
+
+
+  <li>sublevel - array of sublevels achieved</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, in_scout_id, in_awd_id) - Initialises object.</li>
+
+
+  <li>add() - Adds new achievement record</li>
+
+
+  <li>delete() - removes achievement record</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="histrec"></a>class histrec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to history records.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>found</li>
+
+
+  <li>conn_id</li>
+
+
+  <li>hist_id</li>
+
+
+  <li>action</li>
+
+
+  <li>update_tm</li>
+
+
+  <li>scout_id</li>
+
+
+  <li>id1</li>
+
+
+  <li>id2</li>
+
+
+  <li>id3</li>
+
+
+  <li>result</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, hist_id) - Initialises object.</li>
+
+
+  <li>add() - Adds new history record.</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="messagerec"></a>class messagerec</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides access to message records.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>database</li>
+
+
+  <li>found</li>
+
+
+  <li>msg_id</li>
+
+
+  <li>from_id</li>
+
+
+  <li>to_id</li>
+
+
+  <li>create_tm</li>
+
+
+  <li>for_sysadmin</li>
+
+
+  <li>status</li>
+
+
+  <li>notify</li>
+
+
+  <li>name</li>
+
+
+  <li>email</li>
+
+
+  <li>telephone</li>
+
+
+  <li>subject</li>
+
+
+  <li>body</li>
+
+
+  <li>last_update</li>
+
+
+  <li>response</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, msg_id) - Initialises object.</li>
+
+
+  <li>add() - Adds new message record.</li>
+
+
+  <li>update() - Updates message record</li>
+
+
+</ul>
+
+
+<hr>
+<h2><a name="section_list"></a>class sys_admin_msg_list</h2>
+
+
+<blockquote> 
+  
+  
+  <p>Provides list of messages for sys_admins.</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+
+  <li>messagelistlist</li>
+
+
+  <li>cStr</li>
+
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+
+  <li>__init__(db, status='N') - Populates the messagelist defined above.</li>
+
+
+</ul>
+
+
+
+<hr style="width: 100%; height: 2px;">
+<h2><a name="nationalrec"></a>class nationalrec</h2>
+
+
+<blockquote>
+  
+  
+  <p>This class provide access to attributes of the national 'top level' record 
+    of the scout DB heirarcy..</p>
+
+
+</blockquote>
+
+
+<h3>Properties </h3>
+
+
+<ul>
+
+  <li>database</li>
+
+  <li>name</li>
+
+  <li>found - 1 if found, 0 if not found (should never happen)</li>
+
+  <li>arealist - initialised by area_list() method</li>
+
+  <li>rolelist - initialised by the role_list() method</li>
+
+</ul>
+
+
+<h3>Methods</h3>
+
+
+<ul>
+
+  <li>__init__(db) - initiates the object. db is database object</li>
+
+  <li>update() - update the name of the national record</li>
+
+  <li>area_list() - returns list of areas in the database</li>
+
+  <li>role_list() - returns list of adult roles at the national level</li>
+
+</ul>
+
+
+<p>&nbsp;</p>
+
+
+</body>
+</html>
